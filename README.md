@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Miswak General Trading Est (MGTE) — Premium E-commerce Frontend
 
-## Getting Started
+A production-quality, responsive Next.js 16 (App Router) frontend designed for **Miswak General Trading Est (MGTE)**. Built with TypeScript, React 19, Tailwind CSS v4, Lucide React icons, and Zustand state management with `localStorage` persistence.
 
-First, run the development server:
+---
 
+## 🚀 Getting Started
+
+### 1. Installation
+Dependencies are already installed. If needed, re-install with:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Development Server
+Start the development server:
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Production Build
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🎨 Brand Color Tokens
 
-To learn more about Next.js, take a look at the following resources:
+- **Primary Dark Green**: `#006838`
+- **Deep Green**: `#004D2C`
+- **Very Dark Green**: `#003D25`
+- **Background Cream**: `#F8F4E9`
+- **Warm Light Beige**: `#EFE5D1`
+- **Logo Grey**: `#8A8C8F`
+- **Black / Charcoal**: `#171717`
+- **Accent Gold / Orange**: `#E5A024` / `#D49A38`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 How to Replace Logo, Hero & Product Images
 
-## Deploy on Vercel
+All public media assets are stored inside the `public/` directory with clean, modular folder structures:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+public/
+├── brand/
+│   ├── mgte-logo.svg           # Main dark green logo for header
+│   └── mgte-logo-white.svg     # White/cream logo for footer
+├── hero/
+│   └── hero-products.png       # Main hero product composition (Supports transparent PNG/WebP)
+├── categories/
+│   ├── miswak-sticks.png       # Miswak Sticks Category
+│   ├── miswak-packs.png        # Miswak Box Packs Category
+│   ├── natural-oils.png        # Natural Oils Category
+│   └── other-products.png      # Other Products Category
+├── products/
+│   ├── tybakh.png              # Tybakh Sewak product image
+│   ├── sewak-al-nusuk.png      # Sewak Al-Nusuk product image
+│   ├── al-haram.png            # Al-Haram Sewak product image
+│   └── al-mutahir.png          # Al-Mutahir box pack image
+└── lifestyle/
+    ├── about-miswak.png        # About section lifestyle dish image
+    ├── how-step1.png           # Step 1: Prepare image
+    ├── how-step2.png           # Step 2: Brush Gently image
+    └── how-step3.png           # Step 3: Rinse & Store image
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Replacing Assets:
+- **Logo**: Replace `/public/brand/mgte-logo.svg` or `.png` with your official vector logo asset.
+- **Hero Image**: Replace `/public/hero/hero-products.png` with transparent product composition WebP/PNG.
+- **Products**: Replace PNG/WebP files in `/public/products/` and update `/src/data/products.ts` if you add new products or change filenames.
+- **Categories**: Replace images in `/public/categories/`.
+
+---
+
+## 🏗️ Architecture & Data Layer
+
+- **Types**: Defined in `src/types/product.ts`
+- **Mock Data**: Located in `src/data/products.ts`, `src/data/categories.ts`, `src/data/testimonials.ts`
+- **API Abstraction Layer**: Located in `src/services/products.ts` and `src/services/categories.ts`. These functions expose `getProducts()`, `getProductBySlug()`, `getFeaturedProducts()`, `searchProducts()` and can easily be connected to a REST API, Next.js Server Actions, or Node.js Express backend in the future without changing any UI components.
+- **Cart State**: Managed with Zustand in `src/store/cartStore.ts` with instant slide-over drawer, local storage persistence, quantity controls, and toast notifications.
+
+---
+
+## 📱 Supported Pages & Routes
+
+- `/` — Homepage (Hero, Categories, Best Sellers, About, How to Use, Benefits, Testimonials, Newsletter)
+- `/shop` — Shop page with Category Filters, Price range slider, In-stock toggle, Sort dropdown, and Mobile Drawer
+- `/shop/[slug]` — Product Details Page with thumbnail gallery, stock status, quantity picker, wholesale inquiry banner, and tabs
+- `/category/[slug]` — Category listing page (`/category/miswak-sticks`, `/category/natural-oils`, etc.)
+- `/wholesale` — B2B Wholesale & International Export page with quotation form, MOQ table, export catalog download
+- `/about` — About Miswak General Trading Est & brand heritage
+- `/contact` — Contact page with inquiry form & company details
+- `/cart` — Full Shopping Cart page with promo code input and summary breakdown
+- `/search` — Live product search results page (`/search?q=miswak`)
+- `/privacy-policy` & `/terms` — Legal policies

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 90" width="320" height="90">
+  <defs>
+    <linearGradient id="mgte-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006838" />
+      <stop offset="100%" stop-color="#003D25" />
+    </linearGradient>
+    <linearGradient id="mgte-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5A024" />
+      <stop offset="100%" stop-color="#D49A38" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main Brand Name MGTE -->
+  <g fill="url(#mgte-green)">
+    <text x="10" y="48" font-family="'DM Serif Display', Georgia, serif" font-weight="900" font-size="52" letter-spacing="-1">MGTE</text>
+  </g>
+
+  <!-- Organic Leaf Accents above E -->
+  <path d="M 172 14 C 178 8, 190 12, 192 20 C 184 22, 175 18, 172 14 Z" fill="#E5A024" />
+  <path d="M 166 22 C 172 18, 182 20, 185 28 C 178 28, 170 25, 166 22 Z" fill="#006838" />
+
+  <!-- Tagline Text -->
+  <text x="12" y="66" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#006838" letter-spacing="0.4">TRADE &amp; IMPORT EXPORT PREMIUM QUALITY</text>
+  <text x="12" y="77" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#8A8C8F" letter-spacing="0.8">NATURAL PRODUCTS | KARACHI, PAKISTAN</text>
+</svg>

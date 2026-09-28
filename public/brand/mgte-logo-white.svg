@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 90" width="320" height="90">
+  <defs>
+    <linearGradient id="mgte-gold-white" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2BF5E" />
+      <stop offset="100%" stop-color="#E5A024" />
+    </linearGradient>
+  </defs>
+
+  <g fill="#F8F4E9">
+    <text x="10" y="48" font-family="'DM Serif Display', Georgia, serif" font-weight="900" font-size="52" letter-spacing="-1">MGTE</text>
+  </g>
+
+  <path d="M 172 14 C 178 8, 190 12, 192 20 C 184 22, 175 18, 172 14 Z" fill="#E5A024" />
+  <path d="M 166 22 C 172 18, 182 20, 185 28 C 178 28, 170 25, 166 22 Z" fill="#F8F4E9" />
+
+  <text x="12" y="66" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#EFE5D1" letter-spacing="0.4">TRADE &amp; IMPORT EXPORT PREMIUM QUALITY</text>
+  <text x="12" y="77" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#8A8C8F" letter-spacing="0.8">NATURAL PRODUCTS | KARACHI, PAKISTAN</text>
+</svg>
