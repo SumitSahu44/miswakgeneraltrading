@@ -11,13 +11,13 @@ export default function Footer() {
           
           {/* Column 1: Brand */}
           <div className="space-y-4">
-            <Link href="/" className="inline-block bg-white p-1.5 rounded-xl shadow-xs border border-white/20">
+            <Link href="/" className="inline-block bg-white p-2 rounded-xl shadow-xs border border-white/20">
               <Image
                 src="/miswakgeneraltrading-small.jpeg"
                 alt="Miswak General Trading Est Logo"
-                width={140}
-                height={38}
-                className="h-9 w-auto object-contain rounded-md"
+                width={220}
+                height={60}
+                className="h-14 w-auto object-contain rounded-md"
               />
             </Link>
             <p className="text-[#EFE5D1]/80 text-sm leading-relaxed pr-2">
@@ -28,7 +28,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 pt-2">
               {/* Facebook */}
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/1MBkZNPgvy/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-[#004D2C] hover:bg-[#E5A024] hover:text-[#003D25] text-[#EFE5D1] flex items-center justify-center transition-all"
@@ -41,7 +41,7 @@ export default function Footer() {
 
               {/* Instagram */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/miswakgeneraltrading?utm_source=qr&stkn=MWoyMjN0YnFhNHVmcA=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-[#004D2C] hover:bg-[#E5A024] hover:text-[#003D25] text-[#EFE5D1] flex items-center justify-center transition-all"
@@ -54,7 +54,7 @@ export default function Footer() {
 
               {/* YouTube */}
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@MiswakGeneraltradingest."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-[#004D2C] hover:bg-[#E5A024] hover:text-[#003D25] text-[#EFE5D1] flex items-center justify-center transition-all"
@@ -67,7 +67,7 @@ export default function Footer() {
 
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/miswak-general-trading-est-571a79313?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-[#004D2C] hover:bg-[#E5A024] hover:text-[#003D25] text-[#EFE5D1] flex items-center justify-center transition-all"

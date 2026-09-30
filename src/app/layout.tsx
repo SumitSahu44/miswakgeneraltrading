@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { DM_Serif_Display, Inter } from 'next/font/google';
+import { Cinzel, Cormorant_Garamond, Inter } from 'next/font/google';
 import './globals.css';
 import AnnouncementBar from '@/components/layout/AnnouncementBar';
 import Header from '@/components/layout/Header';
@@ -9,10 +9,18 @@ import SearchModal from '@/components/search/SearchModal';
 import ToastNotification from '@/components/ui/ToastNotification';
 import FloatingActions from '@/components/ui/FloatingActions';
 
-const dmSerif = DM_Serif_Display({
-  weight: ['400'],
+const cinzel = Cinzel({
   subsets: ['latin'],
-  variable: '--font-dm-serif',
+  weight: ['400', '600', '700', '800', '900'],
+  variable: '--font-cinzel',
+  display: 'swap',
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-cormorant',
   display: 'swap',
 });
 
@@ -24,7 +32,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Miswak General Trading Est | Authentic Miswak & Natural Products',
-  description: 'Shop authentic miswak, natural oils and traditional wellness products from Miswak General Trading Est. Worldwide shipping, halal certified, 100% natural.',
+  description: 'Shop authentic miswak, natural oils and traditional wellness products from Miswak General Trading Est. Fast pan-India shipping, halal certified, 100% natural.',
   keywords: ['Miswak', 'Miswak sticks', 'Sewak', 'Natural oils', 'Black seed oil', 'Salvadora Persica', 'MGTE', 'Halal wellness'],
   authors: [{ name: 'Miswak General Trading Est' }],
   metadataBase: new URL('https://miswakgeneraltrading.com'),
@@ -62,8 +70,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${dmSerif.variable} ${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-[#F8F4E9] text-[#171717] selection:bg-[#006838] selection:text-white">
+    <html lang="en" className={`${cinzel.variable} ${cormorant.variable} ${inter.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col bg-wood-grain text-[#1C1814] selection:bg-[#006838] selection:text-white">
         <AnnouncementBar />
         <Header />
         <main className="flex-grow">{children}</main>

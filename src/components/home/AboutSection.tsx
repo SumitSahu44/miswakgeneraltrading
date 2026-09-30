@@ -14,18 +14,18 @@ export default function AboutSection() {
     },
     {
       icon: Globe2,
-      title: 'Global Reach',
+      title: 'Pan-India Reach',
     },
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-[#F8F4E9]">
+    <section id="about" className="py-16 lg:py-24 border-b border-[#DBC6AD]/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* LEFT: Content */}
-          <div className="lg:col-span-6 space-y-6">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#E5A024]">
+          <div className="lg:col-span-7 space-y-6">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#C88E3E]">
               ABOUT US
             </span>
 
@@ -33,27 +33,31 @@ export default function AboutSection() {
               Miswak General Trading Est
             </h2>
 
-            <p className="text-base text-[#171717]/80 leading-relaxed">
-              We are committed to providing authentic miswak, natural oils and traditional products to customers across Pakistan and around the world. Our focus is on quality, purity and customer satisfaction.
-            </p>
-
-            <div className="pt-2">
-              <Link
-                href="/about"
-                className="px-7 py-3.5 bg-[#006838] hover:bg-[#004D2C] text-white font-semibold text-sm rounded-full shadow-md hover:shadow-lg transition-all inline-flex items-center gap-2 group"
-              >
-                <span>Learn More</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+            <div className="space-y-4 text-sm sm:text-base text-[#1C1814]/85 leading-relaxed">
+              <p>
+                The project of packing and packaging Miswak sticks started from an urgent need summarized in our mission to spread a great prophetic tradition that has been forgotten by many people due to the lack of modern marketing and scientific packaging methods.
+              </p>
+              <p>
+                We established <strong>Miswak General Trading Est (MGTE)</strong> as a premier establishment that develops and packages Miswak automatically, based on research, development, and 100% hygienic health supervision. Our commitment is providing the finest quality of Miswak across India.
+              </p>
+              <p>
+                We work to spread Miswak across the country through participation in local exhibitions, research development, and scientific papers in cooperation with scientific research centers in India.
+              </p>
+              <p>
+                Seeking to follow market developments and modern shopping methods, we created our specialized website for online shopping, featuring our complete product range with secure electronic payments and fast shipping across India:{' '}
+                <a href="https://miswakgeneraltrading.com" className="font-bold text-[#006838] underline">
+                  miswakgeneraltrading.com
+                </a>.
+              </p>
             </div>
 
             {/* Trust Items */}
-            <div className="pt-8 border-t border-[#EFE5D1] grid grid-cols-3 gap-4">
+            <div className="pt-6 border-t border-[#DBC6AD]/60 grid grid-cols-3 gap-4">
               {trustPoints.map((item, idx) => {
                 const IconComponent = item.icon;
                 return (
                   <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-2">
-                    <div className="w-10 h-10 rounded-full bg-[#EFE5D1] text-[#006838] flex items-center justify-center border border-[#006838]/20">
+                    <div className="w-10 h-10 rounded-full bg-[#EBE0CE] text-[#006838] flex items-center justify-center border border-[#006838]/20">
                       <IconComponent className="w-5 h-5 stroke-[1.75]" />
                     </div>
                     <span className="text-xs font-bold text-[#003D25]">
@@ -67,8 +71,8 @@ export default function AboutSection() {
           </div>
 
           {/* RIGHT: Lifestyle Visual */}
-          <div className="lg:col-span-6 flex justify-center">
-            <div className="relative w-full max-w-lg aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+          <div className="lg:col-span-5 flex justify-center">
+            <div className="relative w-full max-w-lg aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border-4 border-[#FFFDF8]">
               <Image
                 src="/lifestyle/about-miswak.png"
                 alt="Authentic natural miswak sticks on ceramic dish"

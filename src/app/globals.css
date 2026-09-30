@@ -4,31 +4,83 @@
   --color-mgte-dark: #003D25;
   --color-mgte-deep: #004D2C;
   --color-mgte-green: #006838;
-  --color-mgte-cream: #F8F4E9;
-  --color-mgte-beige: #EFE5D1;
-  --color-mgte-gold: #D49A38;
+
+  /* Natural Miswak & Wood Theme Palette */
+  --color-mgte-wood-light: #F6F0E5;
+  --color-mgte-wood: #EBE0CE;
+  --color-mgte-wood-warm: #E2CEB4;
+  --color-mgte-wood-dark: #3A2312;
+  --color-mgte-wood-border: #DBC6AD;
+
+  --color-mgte-cream: #F6F0E5;
+  --color-mgte-beige: #EBE0CE;
+  --color-mgte-gold: #C88E3E;
   --color-mgte-gold-light: #E5A024;
   --color-mgte-grey: #8A8C8F;
-  --color-mgte-charcoal: #171717;
+  --color-mgte-charcoal: #1C1814;
 
-  --font-serif: var(--font-dm-serif), 'Playfair Display', Georgia, serif;
+  --font-serif: var(--font-cinzel), 'Cinzel', var(--font-cormorant), Georgia, serif;
+  --font-siwak: var(--font-cinzel), 'Cinzel', 'Trajan Pro', Georgia, serif;
+  --font-italic-serif: var(--font-cormorant), Georgia, serif;
   --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
 }
 
 :root {
-  --background: #F8F4E9;
-  --foreground: #171717;
+  --background: #F6F0E5;
+  --foreground: #1C1814;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--background);
+  background-color: #F6F0E5;
+  background-image:
+    linear-gradient(rgba(246, 240, 229, 0.55), rgba(246, 240, 229, 0.55)),
+    url('/hero/whole-bg.jpeg');
+  background-repeat: repeat;
+  background-size: 700px auto;
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-sans);
   overflow-x: hidden;
 }
 
-h1, h2, h3, .font-serif-title {
-  font-family: var(--font-serif);
+h1,
+h2,
+h3,
+.font-serif-title,
+.font-serif,
+.font-siwak {
+  font-family: var(--font-siwak);
+  letter-spacing: 0.02em;
+}
+
+/* Wood & Miswak Special Theme Utility Classes */
+.bg-wood-grain {
+  background-color: #F6F0E5;
+  background-image:
+    linear-gradient(rgba(246, 240, 229, 0.55), rgba(246, 240, 229, 0.55)),
+    url('/hero/whole-bg.jpeg');
+  background-repeat: repeat;
+  background-size: 700px auto;
+  background-attachment: fixed;
+}
+
+.bg-wood-card {
+  background-color: rgba(255, 253, 248, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid #DBC6AD;
+  box-shadow: 0 10px 25px -5px rgba(58, 35, 18, 0.05), 0 8px 10px -6px rgba(58, 35, 18, 0.03);
+}
+
+.border-wood {
+  border-color: #DBC6AD;
+}
+
+.border-wood-subtle {
+  border-color: rgba(219, 198, 173, 0.6);
 }
 
 /* Custom Scrollbar */
@@ -36,21 +88,31 @@ h1, h2, h3, .font-serif-title {
   width: 8px;
   height: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #F8F4E9;
+  background: #EBE0CE;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #006838;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #004D2C;
 }
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {

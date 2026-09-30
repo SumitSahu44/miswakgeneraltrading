@@ -11,8 +11,7 @@ export const products: Product[] = [
     compareAtPrice: 600,
     currency: '₹',
     images: [
-      '/products/tybakh.png',
-      '/categories/miswak-sticks.png',
+      '/lifestyle/about-miswak.png',
       '/hero/hero-products.png',
     ],
     specifications: [
@@ -27,7 +26,7 @@ export const products: Product[] = [
     reviewCount: 156,
     badge: 'POPULAR',
     sku: 'MGTE-MSW-01',
-    origin: 'Pakistan / Saudi Arabia',
+    origin: 'Mewat, Haryana, India',
     packaging: 'Hygienic Foil Pack',
   },
   {
@@ -40,7 +39,7 @@ export const products: Product[] = [
     compareAtPrice: 650,
     currency: '₹',
     images: [
-      '/products/al-haram.png',
+      '/lifestyle/about-miswak.png',
       '/hero/hero-products.png',
     ],
     specifications: [
@@ -53,7 +52,7 @@ export const products: Product[] = [
     reviewCount: 124,
     badge: 'BEST SELLER',
     sku: 'MGTE-ZAT-02',
-    origin: 'Middle East',
+    origin: 'Rajasthan, India',
     packaging: 'Single Protective Wrap',
   },
   {
@@ -66,8 +65,8 @@ export const products: Product[] = [
     compareAtPrice: 450,
     currency: '₹',
     images: [
-      '/products/sewak-al-nusuk.png',
-      '/categories/miswak-packs.png',
+      '/lifestyle/about-miswak.png',
+      '/hero/hero-products.png',
     ],
     specifications: [
       'Length 9 inches | Thickness 14 mm to 20 mm',
@@ -81,7 +80,7 @@ export const products: Product[] = [
     reviewCount: 98,
     badge: 'ECO CHOICE',
     sku: 'MGTE-RAW-03',
-    origin: 'Pakistan',
+    origin: 'Haryana, India',
     packaging: 'No Plastic Packaging (Bulk / Loose)',
   },
   {
@@ -94,8 +93,8 @@ export const products: Product[] = [
     compareAtPrice: 800,
     currency: '₹',
     images: [
-      '/categories/natural-oils.png',
-      '/products/tybakh.png',
+      '/lifestyle/about-miswak.png',
+      '/hero/hero-products.png',
     ],
     specifications: [
       '100ml Pure Concentrated Liquid Extract',
@@ -107,7 +106,7 @@ export const products: Product[] = [
     reviewCount: 88,
     badge: '100% PURE',
     sku: 'MGTE-EXT-04',
-    origin: 'Pakistan',
+    origin: 'Haryana, India',
     packaging: '100ml Amber Bottle',
   },
   {
@@ -120,8 +119,8 @@ export const products: Product[] = [
     compareAtPrice: 500,
     currency: '₹',
     images: [
-      '/products/al-mutahir.png',
-      '/categories/other-products.png',
+      '/lifestyle/about-miswak.png',
+      '/hero/hero-products.png',
     ],
     specifications: [
       '100% Pure Organic Miswak Powder (100g Jar)',
@@ -133,7 +132,7 @@ export const products: Product[] = [
     reviewCount: 110,
     badge: 'ORGANIC',
     sku: 'MGTE-PWD-05',
-    origin: 'Pakistan',
+    origin: 'Haryana, India',
     packaging: '100g Sealed Container',
   },
   {
@@ -147,7 +146,7 @@ export const products: Product[] = [
     currency: '₹',
     images: [
       '/lifestyle/about-miswak.png',
-      '/categories/miswak-sticks.png',
+      '/hero/hero-products.png',
     ],
     specifications: [
       'Pack of 10 Pre-Cut Pieces (3-4 inches each)',
@@ -159,7 +158,8 @@ export const products: Product[] = [
     reviewCount: 74,
     badge: 'READY USE',
     sku: 'MGTE-CUT-06',
-    origin: 'Pakistan',
+    origin: 'Haryana, India',
     packaging: 'Hygienic Pack of 10 Cut Pieces',
   },
 ];
+

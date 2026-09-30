@@ -36,7 +36,7 @@ function ShopContent() {
   }
 
   return (
-    <div className="py-10 lg:py-16 bg-[#F8F4E9]">
+    <div className="py-10 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         {/* Breadcrumb */}
@@ -47,9 +47,9 @@ function ShopContent() {
         </nav>
 
         {/* Page Title & Count */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 border-b border-[#EFE5D1]">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 border-b border-[#DBC6AD]/60">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#E5A024]">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#C88E3E]">
               DIRECT CATALOGUE
             </span>
             <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#003D25] mt-1">
@@ -62,7 +62,7 @@ function ShopContent() {
 
           {/* Controls (Sort & Stock toggle) */}
           <div className="flex flex-wrap items-center gap-3">
-            <label className="flex items-center gap-2 px-3 py-2 bg-white rounded-xl border border-[#EFE5D1] text-xs font-medium text-[#171717] cursor-pointer select-none">
+            <label className="flex items-center gap-2 px-3 py-2 bg-[#FFFDF8] rounded-xl border border-[#DBC6AD] text-xs font-medium text-[#171717] cursor-pointer select-none">
               <input
                 type="checkbox"
                 checked={inStockOnly}
@@ -73,7 +73,7 @@ function ShopContent() {
             </label>
 
             {/* Sort Dropdown */}
-            <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-xl border border-[#EFE5D1]">
+            <div className="flex items-center gap-2 bg-[#FFFDF8] px-3 py-2 rounded-xl border border-[#DBC6AD]">
               <SlidersHorizontal className="w-4 h-4 text-[#8A8C8F]" />
               <select
                 value={selectedSort}

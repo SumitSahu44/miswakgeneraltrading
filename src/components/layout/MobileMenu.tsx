@@ -17,21 +17,29 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const [isProductsOpen, setIsProductsOpen] = useState(true);
   const { openSearch } = useCartStore();
 
-  if (!isOpen) return null;
-
   return (
-    <div className="fixed inset-0 z-50 lg:hidden">
+    <div
+      className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${
+        isOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
+      }`}
+    >
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
+        className={`fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity duration-300 ${
+          isOpen ? 'opacity-100' : 'opacity-0'
+        }`}
         onClick={onClose}
       />
 
       {/* Drawer */}
-      <div className="fixed inset-y-0 left-0 w-full max-w-xs bg-[#F8F4E9] shadow-2xl flex flex-col z-10 animate-fade-in">
+      <div
+        className={`fixed inset-y-0 left-0 w-full max-w-xs bg-[#F8F4E9] shadow-2xl flex flex-col z-10 transition-transform duration-300 ease-out ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-[#EFE5D1] bg-[#003D25]">
-          <Link href="/" onClick={onClose} className="block relative w-36 h-10">
+          <Link href="/" onClick={onClose} className="block relative w-48 h-12">
             <Image
               src="/miswakgeneraltrading-small.jpeg"
               alt="Miswak General Trading Est Logo"
@@ -68,6 +76,36 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             className="flex items-center justify-between px-4 py-3 text-[#171717] hover:text-[#006838] hover:bg-[#EFE5D1]/60 font-semibold rounded-lg transition-colors text-sm"
           >
             <span>Home</span>
+            <ChevronRight className="w-4 h-4 text-[#8A8C8F]" />
+          </Link>
+
+          {/* About US */}
+          <Link
+            href="/#about"
+            onClick={onClose}
+            className="flex items-center justify-between px-4 py-3 text-[#171717] hover:text-[#006838] hover:bg-[#EFE5D1]/60 font-semibold rounded-lg transition-colors text-sm"
+          >
+            <span>About US</span>
+            <ChevronRight className="w-4 h-4 text-[#8A8C8F]" />
+          </Link>
+
+          {/* Benefits of Miswak */}
+          <Link
+            href="/#benefits"
+            onClick={onClose}
+            className="flex items-center justify-between px-4 py-3 text-[#171717] hover:text-[#006838] hover:bg-[#EFE5D1]/60 font-semibold rounded-lg transition-colors text-sm"
+          >
+            <span>Benefits of Miswak</span>
+            <ChevronRight className="w-4 h-4 text-[#8A8C8F]" />
+          </Link>
+
+          {/* Distributors and Agents */}
+          <Link
+            href="/#distribution"
+            onClick={onClose}
+            className="flex items-center justify-between px-4 py-3 text-[#171717] hover:text-[#006838] hover:bg-[#EFE5D1]/60 font-semibold rounded-lg transition-colors text-sm"
+          >
+            <span>Distributors and Agents</span>
             <ChevronRight className="w-4 h-4 text-[#8A8C8F]" />
           </Link>
 
@@ -108,26 +146,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </div>
             )}
           </div>
-
-          {/* Wholesale */}
-          <Link
-            href="/wholesale"
-            onClick={onClose}
-            className="flex items-center justify-between px-4 py-3 text-[#171717] hover:text-[#006838] hover:bg-[#EFE5D1]/60 font-semibold rounded-lg transition-colors text-sm"
-          >
-            <span>Wholesale</span>
-            <ChevronRight className="w-4 h-4 text-[#8A8C8F]" />
-          </Link>
-
-          {/* About */}
-          <Link
-            href="/about"
-            onClick={onClose}
-            className="flex items-center justify-between px-4 py-3 text-[#171717] hover:text-[#006838] hover:bg-[#EFE5D1]/60 font-semibold rounded-lg transition-colors text-sm"
-          >
-            <span>About</span>
-            <ChevronRight className="w-4 h-4 text-[#8A8C8F]" />
-          </Link>
 
           {/* Contact */}
           <Link

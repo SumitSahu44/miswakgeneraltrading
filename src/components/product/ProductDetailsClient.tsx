@@ -32,7 +32,7 @@ export default function ProductDetailsClient({ slug }: ProductDetailsClientProps
   const activeSpec = product.specifications?.[selectedSpecIndex] || '';
 
   return (
-    <div className="py-10 lg:py-16 bg-[#F8F4E9]">
+    <div className="py-10 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb */}
@@ -47,7 +47,7 @@ export default function ProductDetailsClient({ slug }: ProductDetailsClientProps
         </nav>
 
         {/* Main Product Details Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start bg-white rounded-3xl p-6 sm:p-10 border border-[#EFE5D1] shadow-sm mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start bg-[#FFFDF8] rounded-3xl p-6 sm:p-10 border border-[#DBC6AD] shadow-sm mb-12">
           
           {/* LEFT: Product Gallery (6 Cols) */}
           <div className="lg:col-span-6">
@@ -131,7 +131,7 @@ export default function ProductDetailsClient({ slug }: ProductDetailsClientProps
                       className={`px-3.5 py-2 rounded-xl text-xs font-semibold border transition-all flex items-center gap-1.5 ${
                         selectedSpecIndex === idx
                           ? 'border-[#006838] bg-[#006838] text-white shadow-xs'
-                          : 'border-[#EFE5D1] bg-[#F8F4E9] text-[#003D25] hover:border-[#006838]/50'
+                          : 'border-[#DBC6AD] bg-[#F6F0E5] text-[#003D25] hover:border-[#006838]/50'
                       }`}
                     >
                       {selectedSpecIndex === idx && <Check className="w-3.5 h-3.5 text-white" />}
@@ -168,12 +168,12 @@ export default function ProductDetailsClient({ slug }: ProductDetailsClientProps
               </div>
 
               {/* Wholesale / Bulk Export Banner */}
-              <div className="bg-[#F8F4E9] p-4 rounded-2xl border border-[#EFE5D1] flex items-center justify-between gap-3 text-xs">
+              <div className="bg-[#F6F0E5] p-4 rounded-2xl border border-[#DBC6AD] flex items-center justify-between gap-3 text-xs">
                 <div className="flex items-center gap-2.5 text-[#003D25]">
-                  <Building2 className="w-5 h-5 text-[#E5A024] shrink-0" />
+                  <Building2 className="w-5 h-5 text-[#C88E3E] shrink-0" />
                   <div>
-                    <p className="font-bold">Need Bulk / Export Quantity?</p>
-                    <p className="text-[#8A8C8F]">Wholesale rates &amp; international shipping available.</p>
+                    <p className="font-bold">Need Bulk / Wholesale Quantity?</p>
+                    <p className="text-[#8A8C8F]">Wholesale rates &amp; pan-India delivery available.</p>
                   </div>
                 </div>
                 <Link
@@ -186,7 +186,7 @@ export default function ProductDetailsClient({ slug }: ProductDetailsClientProps
             </div>
 
             {/* Trust Badges */}
-            <div className="grid grid-cols-3 gap-3 border-t border-[#EFE5D1] pt-6 text-center text-xs">
+            <div className="grid grid-cols-3 gap-3 border-t border-[#DBC6AD]/60 pt-6 text-center text-xs">
               <div className="space-y-1">
                 <ShieldCheck className="w-5 h-5 text-[#006838] mx-auto" />
                 <p className="font-bold text-[#003D25]">Secure Quality</p>
@@ -199,8 +199,8 @@ export default function ProductDetailsClient({ slug }: ProductDetailsClientProps
               </div>
               <div className="space-y-1">
                 <Truck className="w-5 h-5 text-[#006838] mx-auto" />
-                <p className="font-bold text-[#003D25]">Worldwide Shipping</p>
-                <p className="text-[11px] text-[#8A8C8F]">Tracked export delivery</p>
+                <p className="font-bold text-[#003D25]">Pan-India Delivery</p>
+                <p className="text-[11px] text-[#8A8C8F]">Fast express tracking</p>
               </div>
             </div>
 
@@ -209,8 +209,8 @@ export default function ProductDetailsClient({ slug }: ProductDetailsClientProps
         </div>
 
         {/* Detailed Tabs (Description, Product Details, Shipping, FAQ) */}
-        <div className="bg-white rounded-3xl border border-[#EFE5D1] p-6 sm:p-10 shadow-sm mb-16">
-          <div className="flex items-center gap-6 border-b border-[#EFE5D1] pb-4 overflow-x-auto">
+        <div className="bg-[#FFFDF8] rounded-3xl border border-[#DBC6AD] p-6 sm:p-10 shadow-sm mb-16">
+          <div className="flex items-center gap-6 border-b border-[#DBC6AD]/60 pb-4 overflow-x-auto">
             <button
               onClick={() => setActiveTab('desc')}
               className={`font-serif text-lg font-bold pb-2 border-b-2 transition-colors shrink-0 ${
@@ -288,8 +288,8 @@ export default function ProductDetailsClient({ slug }: ProductDetailsClientProps
 
             {activeTab === 'shipping' && (
               <div className="space-y-3">
-                <h4 className="font-bold text-[#003D25]">Worldwide &amp; Domestic Express Shipping</h4>
-                <p>We dispatch all orders within 24 hours. Domestic orders deliver in 2–4 business days. International express shipments deliver within 5–9 business days.</p>
+                <h4 className="font-bold text-[#003D25]">Pan-India Express Shipping</h4>
+                <p>We dispatch all orders within 24 hours. Express shipments across all Indian states deliver within 2–5 business days.</p>
               </div>
             )}
 

@@ -41,13 +41,13 @@ export default function WholesalePage() {
         <div className="bg-[#003D25] text-white rounded-3xl p-8 sm:p-14 border border-[#006838]/40 shadow-xl mb-12 relative overflow-hidden">
           <div className="relative z-10 max-w-3xl space-y-4">
             <span className="text-xs font-bold uppercase tracking-widest text-[#E5A024]">
-              GLOBAL B2B EXPORT DIRECT
+              PAN-INDIA B2B WHOLESALE DIRECT
             </span>
             <h1 className="font-serif text-3xl sm:text-5xl font-bold leading-tight">
-              International Wholesale &amp; Bulk Supply
+              Nationwide Wholesale &amp; Bulk Supply
             </h1>
             <p className="text-base text-[#EFE5D1]/85 leading-relaxed">
-              Miswak General Trading Est (MGTE) is a premier worldwide exporter of fresh, vacuum-sealed Salvadora Persica miswak sticks and cold-pressed natural oils to retailers, distributors, and pharmacy chains globally.
+              Miswak General Trading Est (MGTE) is a premier bulk supplier of fresh, vacuum-sealed Salvadora Persica miswak sticks and cold-pressed natural oils to retailers, distributors, and pharmacy chains across India.
             </p>
           </div>
         </div>
@@ -68,9 +68,9 @@ export default function WholesalePage() {
             <div className="w-12 h-12 rounded-full bg-[#EFE5D1] text-[#006838] flex items-center justify-center">
               <Globe className="w-6 h-6 stroke-[1.5]" />
             </div>
-            <h3 className="font-serif text-lg font-bold text-[#003D25]">Worldwide Air &amp; Sea Freight</h3>
+            <h3 className="font-serif text-lg font-bold text-[#003D25]">Pan-India Express Logistics</h3>
             <p className="text-xs text-[#8A8C8F] leading-relaxed">
-              Direct shipping from Karachi port to UK, Europe, USA, UAE, Middle East, and South East Asia.
+              Direct shipping from Nagina, Mewat (Haryana) hub to all states &amp; cities across India.
             </p>
           </div>
 
@@ -78,9 +78,9 @@ export default function WholesalePage() {
             <div className="w-12 h-12 rounded-full bg-[#EFE5D1] text-[#006838] flex items-center justify-center">
               <Building2 className="w-6 h-6 stroke-[1.5]" />
             </div>
-            <h3 className="font-serif text-lg font-bold text-[#003D25]">Halal &amp; Phytosanitary Docs</h3>
+            <h3 className="font-serif text-lg font-bold text-[#003D25]">GST &amp; Quality Certification</h3>
             <p className="text-xs text-[#8A8C8F] leading-relaxed">
-              Full export documentation, Phytosanitary Certificate, Certificate of Origin, and Lab Quality Reports provided.
+              GST compliant invoice, Certificate of Origin, and Lab Quality Reports provided with every bulk order.
             </p>
           </div>
         </div>
@@ -153,7 +153,7 @@ export default function WholesalePage() {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+44 7911 123456"
+                      placeholder="+91 98765 43210"
                       className="w-full px-4 py-3 bg-[#F8F4E9] border border-[#8A8C8F]/30 rounded-xl text-xs focus:outline-none focus:border-[#006838]"
                     />
                   </div>
@@ -161,13 +161,13 @@ export default function WholesalePage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-[#003D25] mb-1">Destination Country *</label>
+                    <label className="block text-xs font-bold text-[#003D25] mb-1">State / City *</label>
                     <input
                       type="text"
                       required
                       value={formData.country}
                       onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                      placeholder="e.g. United Kingdom"
+                      placeholder="e.g. Maharashtra, Mumbai"
                       className="w-full px-4 py-3 bg-[#F8F4E9] border border-[#8A8C8F]/30 rounded-xl text-xs focus:outline-none focus:border-[#006838]"
                     />
                   </div>

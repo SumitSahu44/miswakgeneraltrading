@@ -48,8 +48,8 @@ export default function Header() {
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#F8F4E9]/95 backdrop-blur-md shadow-md border-b border-[#EFE5D1] py-3'
-            : 'bg-[#F8F4E9] border-b border-[#EFE5D1]/80 py-4'
+            ? 'bg-[#F6F0E5]/95 backdrop-blur-md shadow-md border-b border-[#DBC6AD] py-3'
+            : 'bg-[#F6F0E5]/80 backdrop-blur-xs border-b border-[#DBC6AD]/70 py-4'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,7 +68,7 @@ export default function Header() {
 
             {/* LEFT: MGTE Logo */}
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="relative block w-40 sm:w-48 h-12">
+              <Link href="/" className="relative block w-52 sm:w-64 lg:w-72 h-14 sm:h-16 lg:h-18">
                 <Image
                   src="/miswakgeneraltrading-small.jpeg"
                   alt="Miswak General Trading Est (MGTE)"
@@ -80,7 +80,7 @@ export default function Header() {
             </div>
 
             {/* CENTER: Navigation Links (Desktop) */}
-            <nav className="hidden lg:flex items-center gap-8">
+            <nav className="hidden lg:flex items-center gap-7">
               {/* Home Link */}
               <Link
                 href="/"
@@ -91,9 +91,30 @@ export default function Header() {
                 }`}
               >
                 Home
-                {pathname === '/' && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#006838] rounded-full" />
-                )}
+              </Link>
+
+              {/* About US */}
+              <Link
+                href="/#about"
+                className="relative font-medium text-sm text-[#171717] hover:text-[#006838] transition-colors py-1"
+              >
+                About US
+              </Link>
+
+              {/* Benefits of Miswak */}
+              <Link
+                href="/#benefits"
+                className="relative font-medium text-sm text-[#171717] hover:text-[#006838] transition-colors py-1"
+              >
+                Benefits of Miswak
+              </Link>
+
+              {/* Distributors and Agents */}
+              <Link
+                href="/#distribution"
+                className="relative font-medium text-sm text-[#171717] hover:text-[#006838] transition-colors py-1"
+              >
+                Distributors and Agents
               </Link>
 
               {/* Products Dropdown */}
@@ -113,16 +134,13 @@ export default function Header() {
                 >
                   <span>Products</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180 text-[#006838]' : 'text-[#8A8C8F]'}`} />
-                  {isProductsActive && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#006838] rounded-full" />
-                  )}
                 </button>
 
                 {/* Dropdown Menu Box */}
                 {isDropdownOpen && (
                   <div className="absolute top-full left-0 pt-1 z-50">
-                    <div className="w-80 bg-white rounded-2xl shadow-2xl border border-[#EFE5D1] p-3 space-y-1 animate-fade-in">
-                      <div className="px-3 py-1.5 border-b border-[#EFE5D1] flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#E5A024]">
+                    <div className="w-80 bg-[#FFFDF8] rounded-2xl shadow-2xl border border-[#DBC6AD] p-3 space-y-1 animate-fade-in">
+                      <div className="px-3 py-1.5 border-b border-[#EBE0CE] flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#C88E3E]">
                         <span>Our 6 Products</span>
                         <Sparkles className="w-3.5 h-3.5" />
                       </div>
@@ -132,7 +150,7 @@ export default function Header() {
                         key={item.id}
                         href={`/shop/${item.slug}`}
                         onClick={() => setIsDropdownOpen(false)}
-                        className="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-[#F8F4E9] transition-colors group"
+                        className="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-[#EBE0CE]/40 transition-colors group"
                       >
                         <div className="flex items-center gap-2.5 min-w-0">
                           <span className="w-2 h-2 rounded-full bg-[#006838] shrink-0 opacity-70 group-hover:opacity-100" />
@@ -160,36 +178,6 @@ export default function Header() {
                 )}
               </div>
 
-              {/* Wholesale Link */}
-              <Link
-                href="/wholesale"
-                className={`relative font-medium text-sm transition-colors py-1 ${
-                  pathname === '/wholesale'
-                    ? 'text-[#006838] font-semibold'
-                    : 'text-[#171717] hover:text-[#006838]'
-                }`}
-              >
-                Wholesale
-                {pathname === '/wholesale' && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#006838] rounded-full" />
-                )}
-              </Link>
-
-              {/* About Link */}
-              <Link
-                href="/about"
-                className={`relative font-medium text-sm transition-colors py-1 ${
-                  pathname === '/about'
-                    ? 'text-[#006838] font-semibold'
-                    : 'text-[#171717] hover:text-[#006838]'
-                }`}
-              >
-                About
-                {pathname === '/about' && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#006838] rounded-full" />
-                )}
-              </Link>
-
               {/* Contact Link */}
               <Link
                 href="/contact"
@@ -200,9 +188,6 @@ export default function Header() {
                 }`}
               >
                 Contact
-                {pathname === '/contact' && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#006838] rounded-full" />
-                )}
               </Link>
             </nav>
 

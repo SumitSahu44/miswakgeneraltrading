@@ -33,19 +33,19 @@ export default function CartDrawer() {
       />
 
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-[#F8F4E9] shadow-2xl flex flex-col">
+        <div className="w-screen max-w-md bg-[#F6F0E5] shadow-2xl flex flex-col border-l border-[#DBC6AD]">
           
           {/* Header */}
           <div className="p-6 bg-[#003D25] text-white flex items-center justify-between border-b border-[#006838]/40">
             <div className="flex items-center gap-3">
-              <ShoppingBag className="w-5 h-5 text-[#E5A024]" />
+              <ShoppingBag className="w-5 h-5 text-[#C88E3E]" />
               <h2 className="text-lg font-semibold tracking-wide">
                 Your Shopping Cart ({totalItems})
               </h2>
             </div>
             <button
               onClick={closeCart}
-              className="p-1.5 text-[#EFE5D1] hover:text-white rounded-lg hover:bg-white/10 transition-colors"
+              className="p-1.5 text-[#EBE0CE] hover:text-white rounded-lg hover:bg-white/10 transition-colors"
               aria-label="Close Cart"
             >
               <X className="w-5 h-5" />
@@ -53,10 +53,10 @@ export default function CartDrawer() {
           </div>
 
           {/* Free Shipping Progress Bar */}
-          <div className="bg-[#EFE5D1] px-6 py-3 border-b border-[#8A8C8F]/20 text-xs text-[#003D25]">
+          <div className="bg-[#EBE0CE] px-6 py-3 border-b border-[#DBC6AD]/60 text-xs text-[#003D25]">
             {subtotal >= freeShippingThreshold ? (
               <p className="font-semibold text-[#006838] flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4" /> You unlocked FREE Worldwide Shipping!
+                <ShieldCheck className="w-4 h-4" /> You unlocked FREE Pan-India Shipping!
               </p>
             ) : (
               <div>
@@ -74,10 +74,10 @@ export default function CartDrawer() {
           </div>
 
           {/* Cart Items List */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-4 divide-y divide-[#EFE5D1]">
+          <div className="flex-1 overflow-y-auto p-6 space-y-4 divide-y divide-[#DBC6AD]/60">
             {items.length === 0 ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-12 space-y-4">
-                <div className="w-16 h-16 rounded-full bg-[#EFE5D1] flex items-center justify-center text-[#006838]">
+                <div className="w-16 h-16 rounded-full bg-[#EBE0CE] flex items-center justify-center text-[#006838]">
                   <ShoppingBag className="w-8 h-8 stroke-[1.5]" />
                 </div>
                 <h3 className="font-serif text-xl text-[#003D25] font-bold">Your cart is empty</h3>
@@ -96,7 +96,7 @@ export default function CartDrawer() {
               items.map(({ product, quantity }) => (
                 <div key={product.id} className="pt-4 first:pt-0 flex gap-4">
                   {/* Image */}
-                  <div className="w-20 h-20 bg-white rounded-xl border border-[#EFE5D1] overflow-hidden relative shrink-0 p-2">
+                  <div className="w-20 h-20 bg-[#FFFDF8] rounded-xl border border-[#DBC6AD] overflow-hidden relative shrink-0 p-2">
                     <Image
                       src={product.images[0]}
                       alt={product.name}
@@ -158,7 +158,7 @@ export default function CartDrawer() {
 
           {/* Footer Subtotal & Checkout */}
           {items.length > 0 && (
-            <div className="p-6 bg-white border-t border-[#EFE5D1] space-y-4">
+            <div className="p-6 bg-[#FFFDF8] border-t border-[#DBC6AD] space-y-4">
               <div className="space-y-2">
                 <div className="flex justify-between text-sm text-[#8A8C8F]">
                   <span>Subtotal</span>
@@ -170,7 +170,7 @@ export default function CartDrawer() {
                     {subtotal >= freeShippingThreshold ? 'FREE' : 'Calculated at checkout'}
                   </span>
                 </div>
-                <div className="flex justify-between text-base font-bold text-[#003D25] pt-2 border-t border-[#EFE5D1]">
+                <div className="flex justify-between text-base font-bold text-[#003D25] pt-2 border-t border-[#DBC6AD]/60">
                   <span>Total</span>
                   <span className="text-[#006838]">₹{subtotal.toLocaleString()}</span>
                 </div>
@@ -180,7 +180,7 @@ export default function CartDrawer() {
                 <Link
                   href="/cart"
                   onClick={closeCart}
-                  className="py-3 px-3 bg-[#EFE5D1] text-[#003D25] font-semibold text-center rounded-xl hover:bg-[#EFE5D1]/80 text-xs transition-all flex items-center justify-center"
+                  className="py-3 px-3 bg-[#EBE0CE] text-[#003D25] font-semibold text-center rounded-xl hover:bg-[#EBE0CE]/80 text-xs transition-all flex items-center justify-center"
                 >
                   View Cart
                 </Link>

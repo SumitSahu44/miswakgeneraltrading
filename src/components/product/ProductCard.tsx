@@ -12,13 +12,13 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="group bg-white rounded-2xl border border-[#EFE5D1] shadow-xs hover:shadow-xl hover:border-[#006838]/30 transition-all duration-300 flex flex-col h-full overflow-hidden relative">
+    <div className="group bg-[#FFFDF8] rounded-2xl border border-[#DBC6AD] shadow-sm hover:shadow-xl hover:border-[#006838]/40 transition-all duration-300 flex flex-col h-full overflow-hidden relative">
       
       {/* Product Image Area */}
-      <Link href={`/shop/${product.slug}`} className="block relative aspect-square bg-[#F8F4E9]/50 p-6 overflow-hidden">
+      <Link href={`/shop/${product.slug}`} className="block relative aspect-square bg-[#F6F0E5]/60 p-6 overflow-hidden">
         {/* Badge */}
         {product.badge && (
-          <span className="absolute top-3 left-3 z-10 bg-[#006838] text-[#EFE5D1] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-xs">
+          <span className="absolute top-3 left-3 z-10 bg-[#006838] text-[#F6F0E5] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-xs">
             {product.badge}
           </span>
         )}
@@ -33,15 +33,15 @@ export default function ProductCard({ product }: ProductCardProps) {
       </Link>
 
       {/* Product Info Area */}
-      <div className="p-5 flex flex-col flex-1 justify-between bg-white">
+      <div className="p-5 flex flex-col flex-1 justify-between bg-[#FFFDF8]">
         <div>
           {/* Specifications Badges & Rating */}
           <div className="flex items-center justify-between gap-2 mb-1.5">
-            <span className="text-[11px] font-semibold text-[#006838] bg-[#EFE5D1]/80 px-2 py-0.5 rounded">
+            <span className="text-[11px] font-semibold text-[#003D25] bg-[#EBE0CE] px-2.5 py-0.5 rounded-md border border-[#DBC6AD]/40">
               {product.specifications?.[0] || '100% Natural'}
             </span>
             <div className="flex items-center gap-1 text-xs font-semibold text-[#171717]">
-              <Star className="w-3.5 h-3.5 fill-[#E5A024] text-[#E5A024]" />
+              <Star className="w-3.5 h-3.5 fill-[#C88E3E] text-[#C88E3E]" />
               <span>{product.rating}</span>
             </div>
           </div>
@@ -66,7 +66,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Pricing & Direct WhatsApp Order */}
-        <div className="pt-4 border-t border-[#EFE5D1] mt-4 flex flex-col gap-3">
+        <div className="pt-4 border-t border-[#DBC6AD]/60 mt-4 flex flex-col gap-3">
           <div className="flex items-baseline justify-between gap-2">
             <div className="flex items-baseline gap-2">
               <span className="text-xl font-bold text-[#006838]">

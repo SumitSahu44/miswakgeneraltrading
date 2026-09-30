@@ -33,7 +33,7 @@ export default function AboutPage() {
               Founded with the vision to preserve natural sunnah oral hygiene traditions, Miswak General Trading Est (MGTE) sources genuine Salvadora Persica miswak directly from sustainable, unpolluted natural environments.
             </p>
             <p className="text-sm text-[#171717]/80 leading-relaxed">
-              Every stick is hand-inspected for moistness, bristle density, and natural bark condition before being vacuum sealed. Our commitment ensures that customers in Pakistan, the Middle East, Europe, and worldwide receive miswak as fresh as the day it was harvested.
+              Every stick is hand-inspected for moistness, bristle density, and natural bark condition before being vacuum sealed. Our commitment ensures that customers across Haryana, Delhi NCR, Mumbai, Uttar Pradesh, and all over India receive miswak as fresh as the day it was harvested.
             </p>
 
             <div className="pt-4">
@@ -95,9 +95,9 @@ export default function AboutPage() {
               <div className="w-11 h-11 rounded-full bg-[#EFE5D1] text-[#006838] flex items-center justify-center">
                 <Globe2 className="w-5 h-5" />
               </div>
-              <h3 className="font-serif text-base font-bold text-[#003D25]">Global Reach</h3>
+              <h3 className="font-serif text-base font-bold text-[#003D25]">Pan-India Reach</h3>
               <p className="text-xs text-[#8A8C8F] leading-relaxed">
-                Seamless international export capabilities serving retail buyers and commercial distributors worldwide.
+                Fast nationwide supply chain serving retail buyers and commercial distributors across all states in India.
               </p>
             </div>
 

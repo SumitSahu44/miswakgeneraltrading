@@ -17,16 +17,16 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-[#F8F4E9]">
+    <section className="py-16 lg:py-24 border-b border-[#DBC6AD]/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E5A024]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#C88E3E]">
             WHAT OUR CUSTOMERS SAY
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#003D25]">
-            Trusted by Customers Worldwide
+            Trusted by Customers Across India
           </h2>
         </div>
 
@@ -37,15 +37,15 @@ export default function Testimonials() {
             {testimonials.slice(0, 3).map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-2xl border border-[#EFE5D1] p-8 shadow-xs flex flex-col justify-between hover:shadow-lg transition-all duration-300 relative"
+                className="bg-[#FFFDF8] rounded-2xl border border-[#DBC6AD] p-8 shadow-xs flex flex-col justify-between hover:shadow-lg transition-all duration-300 relative"
               >
-                <Quote className="w-10 h-10 text-[#EFE5D1] absolute top-6 right-6 fill-[#EFE5D1]/40" />
+                <Quote className="w-10 h-10 text-[#DBC6AD] absolute top-6 right-6 fill-[#DBC6AD]/30" />
 
                 <div className="space-y-4 relative z-10">
                   {/* 5 Stars */}
                   <div className="flex items-center gap-1">
                     {[...Array(item.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-[#E5A024] text-[#E5A024]" />
+                      <Star key={i} className="w-4 h-4 fill-[#C88E3E] text-[#C88E3E]" />
                     ))}
                   </div>
 
@@ -56,8 +56,8 @@ export default function Testimonials() {
                 </div>
 
                 {/* User Info */}
-                <div className="flex items-center gap-3 pt-6 border-t border-[#EFE5D1] mt-6">
-                  <div className="w-11 h-11 rounded-full overflow-hidden relative border-2 border-[#EFE5D1]">
+                <div className="flex items-center gap-3 pt-6 border-t border-[#DBC6AD]/60 mt-6">
+                  <div className="w-11 h-11 rounded-full overflow-hidden relative border-2 border-[#DBC6AD]">
                     <Image
                       src={item.avatar}
                       alt={item.name}

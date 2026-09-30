@@ -5,6 +5,7 @@ export const CONTACT_INFO = {
   rawPhone: '919729137786',
   whatsappNumber: '919729137786',
   email: 'miswakgeneraltrading@gmail.com',
+  website: 'miswakgeneraltrading.com',
   address: 'Kila No 99/23/1 & 99/22/22, Tehsil-Ferozpur Jhirka, Sub TehsilNagina, Nagina, Mewat, Haryana, 122108',
 };
 

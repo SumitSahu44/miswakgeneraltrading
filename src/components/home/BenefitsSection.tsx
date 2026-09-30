@@ -23,33 +23,47 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#003D25] text-white py-16 lg:py-24">
-      {/* Background Subtle Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#003D25] via-[#004D2C] to-[#003D25] opacity-90 pointer-events-none" />
+    <section id="benefits" className="relative overflow-hidden bg-[#003D25] text-white py-16 lg:py-24">
+      {/* Background Image & Overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/benefits.png"
+          alt="Benefits of Miswak Background"
+          fill
+          sizes="100vw"
+          className="object-cover opacity-35 mix-blend-overlay"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#003D25]/90 via-[#004D2C]/80 to-[#003D25]/90" />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          
-          {/* LEFT: Text & CTA */}
-          <div className="lg:col-span-5 space-y-6 text-center lg:text-left">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#E5A024]">
-              WHY CHOOSE US
+
+          {/* LEFT: Text & Content */}
+          <div className="lg:col-span-6 space-y-6 text-center lg:text-left">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#C88E3E]">
+              NATURAL DENTAL CARE
             </span>
 
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F8F4E9] leading-tight">
-              The Natural Choice<br />for Everyday Care
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F6F0E5] leading-tight">
+              Benefits of Miswak
             </h2>
 
-            <p className="text-sm sm:text-base text-[#EFE5D1]/85 max-w-md mx-auto lg:mx-0 leading-relaxed">
-              Authentic products, premium quality and a commitment to natural wellness.
-            </p>
+            <div className="space-y-4 text-sm sm:text-base text-[#EBE0CE]/90 leading-relaxed">
+              <p>
+                Modern medicine has emphasized the remarkable usefulness of Miswak, indicating its great benefits for oral health to the extent that led dental researchers and manufacturers to extract its natural active components and use them in toothpastes.
+              </p>
+              <p>
+                Miswak is usually harvested from widely spread desert trees in various regions, but the best and most beneficial of all is the tree existing in the region known as the <strong>Arak tree</strong> (<em>Salvadora persica</em>, Arak, Meswak, Peelu, Toothbrush tree, Mustard tree, Mustard bush).
+              </p>
+            </div>
 
             <div className="pt-2">
               <Link
                 href="/shop"
-                className="px-8 py-3.5 bg-white text-[#003D25] hover:bg-[#F8F4E9] font-bold text-sm rounded-full shadow-lg transition-all inline-flex items-center gap-2 group"
+                className="px-8 py-3.5 bg-white text-[#003D25] hover:bg-[#F6F0E5] font-bold text-sm rounded-full shadow-lg transition-all inline-flex items-center gap-2 group"
               >
-                <span>Shop Now</span>
+                <span>Shop Authentic Miswak</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -72,18 +86,6 @@ export default function BenefitsSection() {
             })}
           </div>
 
-          {/* RIGHT: Visual */}
-          <div className="lg:col-span-3 flex justify-center">
-            <div className="relative w-full max-w-xs aspect-square rounded-2xl overflow-hidden border-2 border-[#006838]/60 shadow-xl">
-              <Image
-                src="/categories/miswak-sticks.png"
-                alt="Fresh cut miswak sticks bundle"
-                fill
-                sizes="(max-width: 1024px) 100vw, 25vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
 
         </div>
       </div>

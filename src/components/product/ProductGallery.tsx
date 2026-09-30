@@ -14,7 +14,7 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
   return (
     <div className="space-y-4">
       {/* Main Image Box */}
-      <div className="bg-white border border-[#EFE5D1] rounded-2xl p-8 relative aspect-square shadow-xs overflow-hidden flex items-center justify-center">
+      <div className="bg-[#F6F0E5]/50 border border-[#DBC6AD] rounded-2xl p-8 relative aspect-square shadow-xs overflow-hidden flex items-center justify-center">
         <Image
           src={selectedImage}
           alt={productName}
@@ -31,10 +31,10 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
             <button
               key={idx}
               onClick={() => setSelectedImage(img)}
-              className={`w-20 h-20 rounded-xl bg-white border-2 overflow-hidden relative shrink-0 p-1.5 transition-all ${
+              className={`w-20 h-20 rounded-xl bg-[#FFFDF8] border-2 overflow-hidden relative shrink-0 p-1.5 transition-all ${
                 selectedImage === img
                   ? 'border-[#006838] ring-2 ring-[#006838]/20'
-                  : 'border-[#EFE5D1] opacity-70 hover:opacity-100'
+                  : 'border-[#DBC6AD] opacity-70 hover:opacity-100'
               }`}
             >
               <Image

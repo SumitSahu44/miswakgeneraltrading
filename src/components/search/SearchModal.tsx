@@ -49,10 +49,10 @@ export default function SearchModal() {
 
       {/* Modal Container */}
       <div className="min-h-screen px-4 text-center">
-        <div className="inline-block w-full max-w-2xl my-12 text-left align-middle transition-all transform bg-[#F8F4E9] shadow-2xl rounded-2xl border border-[#EFE5D1] overflow-hidden relative animate-fade-in z-10">
+        <div className="inline-block w-full max-w-2xl my-12 text-left align-middle transition-all transform bg-[#F6F0E5] shadow-2xl rounded-2xl border border-[#DBC6AD] overflow-hidden relative animate-fade-in z-10">
           
           {/* Search Header Form */}
-          <form onSubmit={handleSubmit} className="relative flex items-center p-4 border-b border-[#EFE5D1] bg-white">
+          <form onSubmit={handleSubmit} className="relative flex items-center p-4 border-b border-[#DBC6AD] bg-[#FFFDF8]">
             <Search className="w-5 h-5 text-[#006838] ml-2 shrink-0" />
             <input
               type="text"
@@ -74,14 +74,14 @@ export default function SearchModal() {
             <button
               type="button"
               onClick={closeSearch}
-              className="p-2 text-[#003D25] hover:bg-[#EFE5D1]/50 rounded-lg transition-colors"
+              className="p-2 text-[#003D25] hover:bg-[#EBE0CE]/50 rounded-lg transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
           </form>
 
           {/* Instant Search Suggestions / Results */}
-          <div className="p-6 max-h-[60vh] overflow-y-auto divide-y divide-[#EFE5D1]">
+          <div className="p-6 max-h-[60vh] overflow-y-auto divide-y divide-[#DBC6AD]/60">
             {query.trim() === '' ? (
               <div className="space-y-4">
                 <p className="text-xs font-semibold text-[#8A8C8F] uppercase tracking-wider">Popular Searches</p>
@@ -90,7 +90,7 @@ export default function SearchModal() {
                     <button
                       key={tag}
                       onClick={() => setQuery(tag)}
-                      className="px-3 py-1.5 bg-white border border-[#EFE5D1] hover:border-[#006838] text-xs font-medium text-[#003D25] rounded-full transition-all"
+                      className="px-3 py-1.5 bg-[#FFFDF8] border border-[#DBC6AD] hover:border-[#006838] text-xs font-medium text-[#003D25] rounded-full transition-all"
                     >
                       {tag}
                     </button>
@@ -109,9 +109,9 @@ export default function SearchModal() {
                     key={product.id}
                     href={`/shop/${product.slug}`}
                     onClick={closeSearch}
-                    className="flex items-center gap-4 py-2 px-2 hover:bg-[#EFE5D1]/50 rounded-xl transition-colors group"
+                    className="flex items-center gap-4 py-2 px-2 hover:bg-[#EBE0CE]/50 rounded-xl transition-colors group"
                   >
-                    <div className="w-14 h-14 bg-white border border-[#EFE5D1] rounded-lg relative overflow-hidden shrink-0 p-1">
+                    <div className="w-14 h-14 bg-[#FFFDF8] border border-[#DBC6AD] rounded-lg relative overflow-hidden shrink-0 p-1">
                       <Image
                         src={product.images[0]}
                         alt={product.name}
