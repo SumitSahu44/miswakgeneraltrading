@@ -21,7 +21,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-[#EFE5D1]/80 text-sm leading-relaxed pr-2">
-              Supplying authentic miswak, natural oils and traditional products with a commitment to quality and customer satisfaction.
+              Supplying authentic miswak, premium oral care and traditional wellness products with a commitment to quality and customer satisfaction.
             </p>
             
             {/* Social Icons (Inline SVG for 100% Reliability) */}

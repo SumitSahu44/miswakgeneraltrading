@@ -27,7 +27,7 @@ export default function TermsPage() {
           <section className="space-y-2">
             <h2 className="font-serif text-xl font-bold text-[#003D25]">2. Product Authenticity</h2>
             <p>
-              All miswak sticks and natural oils supplied by MGTE are 100% natural, unadulterated, and sourced from natural Salvadora Persica roots.
+              All miswak sticks and traditional wellness products supplied by MGTE are 100% natural, unadulterated, and sourced from natural Salvadora Persica roots.
             </p>
           </section>
 

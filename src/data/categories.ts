@@ -21,11 +21,11 @@ export const categories: Category[] = [
   },
   {
     id: 'cat-3',
-    slug: 'natural-oils',
-    name: 'Natural Oils',
-    shortDescription: 'Cold pressed & natural oils',
-    description: 'Pure cold-pressed Black Seed, Extra Virgin Olive, and therapeutic herbal oils bottled at source.',
-    image: '/categories/natural-oils.png',
+    slug: 'miswak-extracts-powder',
+    name: 'Extracts & Powders',
+    shortDescription: '100% Pure miswak extracts & powder',
+    description: 'Pure Salvadora Persica root extracts and ultra-fine oral care powders for enamel whitening and gum care.',
+    image: '/products/product4.jpeg',
     itemCount: 6,
   },
   {

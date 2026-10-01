@@ -58,7 +58,7 @@ export default function SearchModal() {
               type="text"
               value={query}
               onChange={e => setQuery(e.target.value)}
-              placeholder="Search products (e.g. Tybakh, Miswak, Black seed oil)..."
+              placeholder="Search products (e.g. Miswak, Zaitoon, Powder, Extract)..."
               className="w-full px-4 py-2 text-base bg-transparent text-[#171717] focus:outline-none placeholder-[#8A8C8F]"
               autoFocus
             />
@@ -86,7 +86,7 @@ export default function SearchModal() {
               <div className="space-y-4">
                 <p className="text-xs font-semibold text-[#8A8C8F] uppercase tracking-wider">Popular Searches</p>
                 <div className="flex flex-wrap gap-2">
-                  {['Tybakh Miswak', 'Sewak Al-Nusuk', 'Natural Oils', 'Al-Haram', 'Travel Pack'].map(tag => (
+                  {['Miswak Stick', 'Zaitoon Stick', 'Miswak Powder', 'Miswak Extract', 'Raw Cut Miswak'].map(tag => (
                     <button
                       key={tag}
                       onClick={() => setQuery(tag)}

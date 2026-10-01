@@ -56,7 +56,7 @@ export default function Hero() {
 
             {/* Supporting Copy */}
             <p className="text-base sm:text-lg text-[#171717]/80 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Authentic miswak, natural oils and traditional wellness products sourced with care.
+              Authentic miswak and traditional natural oral wellness products sourced with care.
             </p>
 
             {/* CTA Buttons */}

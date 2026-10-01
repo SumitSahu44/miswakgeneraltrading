@@ -4,7 +4,7 @@ export async function generateStaticParams() {
   return [
     { slug: 'miswak-sticks' },
     { slug: 'miswak-packs' },
-    { slug: 'natural-oils' },
+    { slug: 'miswak-extracts-powder' },
     { slug: 'other-products' },
   ];
 }

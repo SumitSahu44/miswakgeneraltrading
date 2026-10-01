@@ -47,7 +47,7 @@ export default function WholesalePage() {
               Nationwide Wholesale &amp; Bulk Supply
             </h1>
             <p className="text-base text-[#EFE5D1]/85 leading-relaxed">
-              Miswak General Trading Est (MGTE) is a premier bulk supplier of fresh, vacuum-sealed Salvadora Persica miswak sticks and cold-pressed natural oils to retailers, distributors, and pharmacy chains across India.
+              Miswak General Trading Est (MGTE) is a premier bulk supplier of fresh, vacuum-sealed Salvadora Persica miswak sticks and traditional wellness products to retailers, distributors, and pharmacy chains across India.
             </p>
           </div>
         </div>
@@ -235,10 +235,6 @@ export default function WholesalePage() {
                 <li className="pt-2 flex justify-between">
                   <span>Box Packs (Multi-Stick)</span>
                   <span className="font-bold text-[#006838]">250 Boxes</span>
-                </li>
-                <li className="pt-2 flex justify-between">
-                  <span>Cold Pressed Oils (100ml)</span>
-                  <span className="font-bold text-[#006838]">100 Bottles</span>
                 </li>
                 <li className="pt-2 flex justify-between">
                   <span>Custom OEM Private Label</span>

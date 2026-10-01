@@ -16,7 +16,7 @@ export default function AboutPage() {
             Miswak General Trading Est
           </h1>
           <p className="text-base sm:text-lg text-[#171717]/80 leading-relaxed">
-            Supplying authentic miswak, natural oils and traditional wellness products with an unyielding commitment to quality, purity and customer satisfaction around the globe.
+            Supplying authentic miswak and traditional wellness products with an unyielding commitment to quality, purity and customer satisfaction around the globe.
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export default function AboutPage() {
               </div>
               <h3 className="font-serif text-base font-bold text-[#003D25]">Quality Control</h3>
               <p className="text-xs text-[#8A8C8F] leading-relaxed">
-                Strict multi-stage grading system for thickness, flexibility, and essential oil concentration.
+                Strict multi-stage grading system for thickness, flexibility, and natural mineral concentration.
               </p>
             </div>
 

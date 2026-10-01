@@ -1,31 +1,39 @@
 import Image from 'next/image';
-import { ShieldCheck, Award, Leaf, CheckCircle2 } from 'lucide-react';
+import { Award, CheckCircle2 } from 'lucide-react';
 
 export default function CertificationsSection() {
   const certifications = [
+    {
+      id: 'jaivik-bharat',
+      title: 'Jaivik Bharat Certified',
+      subtitle: 'Official Organic Standard (FSSAI)',
+      description: 'Certified under FSSAI Jaivik Bharat regulations, guaranteeing 100% authentic organic product purity, safety and standards.',
+      image: '/certifications/jaivik-bharat.png',
+      badge: 'JAIVIK BHARAT',
+    },
     {
       id: 'iso',
       title: 'ISO 9001:2015 Certified',
       subtitle: 'Certified Quality Management System',
       description: 'Manufactured and packaged under strict ISO 9001:2015 standards, ensuring international quality control and hygiene.',
-      image: '/certifications/iso-9001.svg',
+      image: '/certifications/iso-certified.png',
       badge: 'ISO 9001:2015',
     },
     {
-      id: 'halal',
-      title: '100% Halal Certified',
+      id: 'halal-india',
+      title: 'Halal India Certified',
       subtitle: 'Authentic Sunnah & Shariah Compliant',
-      description: 'Pure 100% natural Salvadora Persica roots processed without alcohol, animal products, or synthetic chemicals.',
-      image: '/certifications/halal.svg',
-      badge: 'HALAL CERTIFIED',
+      description: 'Certified by Halal India. Pure 100% natural Salvadora Persica roots processed without alcohol, animal derivatives, or synthetic chemicals.',
+      image: '/certifications/halal-india.png',
+      badge: 'HALAL INDIA',
     },
     {
-      id: 'organic',
-      title: '100% Organic & Eco-Friendly',
-      subtitle: 'Environment Friendly - Return to Nature',
-      description: 'Freshly harvested from sustainable, unpolluted organic trees. 100% biodegradable and zero harmful additives.',
-      image: '/certifications/organic.svg',
-      badge: '100% ORGANIC',
+      id: 'india-organic',
+      title: 'India Organic (NPOP)',
+      subtitle: 'National Programme for Organic Production',
+      description: 'Officially accredited under NPOP standards for sustainable organic harvesting and eco-friendly chemical-free processing.',
+      image: '/certifications/india-organic.png',
+      badge: 'INDIA ORGANIC',
     },
   ];
 
@@ -52,49 +60,49 @@ export default function CertificationsSection() {
           </p>
         </div>
 
-        {/* 3 Certifications Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        {/* 4 Certifications Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
           {certifications.map((item) => (
             <div
               key={item.id}
-              className="group bg-[#F8F4E9]/80 backdrop-blur-xs rounded-3xl p-8 border border-[#DBC6AD] shadow-sm hover:shadow-xl hover:border-[#006838]/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between text-center relative overflow-hidden"
+              className="group bg-[#F8F4E9]/80 backdrop-blur-xs rounded-3xl p-6 sm:p-7 border border-[#DBC6AD] shadow-sm hover:shadow-xl hover:border-[#006838]/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between text-center relative overflow-hidden"
             >
               {/* Top Card Badge */}
-              <div className="absolute top-4 right-4">
-                <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#006838] text-white tracking-wider uppercase shadow-2xs">
+              <div className="absolute top-3.5 right-3.5">
+                <span className="text-[9px] sm:text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#006838] text-white tracking-wider uppercase shadow-2xs">
                   {item.badge}
                 </span>
               </div>
 
               {/* Logo Visual Container */}
-              <div className="space-y-6 pt-2">
-                <div className="w-36 h-36 mx-auto relative rounded-full bg-white p-3 border-2 border-[#DBC6AD] shadow-md group-hover:scale-105 group-hover:border-[#006838] transition-all duration-300 flex items-center justify-center">
+              <div className="space-y-5 pt-2">
+                <div className="w-32 h-32 sm:w-36 sm:h-36 mx-auto relative rounded-2xl bg-white p-3.5 border-2 border-[#DBC6AD]/80 shadow-md group-hover:scale-105 group-hover:border-[#006838] transition-all duration-300 flex items-center justify-center">
                   <Image
                     src={item.image}
                     alt={item.title}
                     width={140}
                     height={140}
-                    className="w-full h-full object-contain filter contrast-125"
+                    className="w-full h-full object-contain"
                     priority
                   />
                 </div>
 
                 {/* Text Content */}
-                <div className="space-y-2">
-                  <h3 className="font-serif text-xl font-bold text-[#003D25] group-hover:text-[#006838] transition-colors">
+                <div className="space-y-1.5">
+                  <h3 className="font-serif text-lg sm:text-xl font-bold text-[#003D25] group-hover:text-[#006838] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-xs font-semibold text-[#C88E3E] uppercase tracking-wider">
+                  <p className="text-[11px] font-semibold text-[#C88E3E] uppercase tracking-wider">
                     {item.subtitle}
                   </p>
-                  <p className="text-xs text-[#1C1814]/75 leading-relaxed pt-2">
+                  <p className="text-xs text-[#1C1814]/75 leading-relaxed pt-1.5">
                     {item.description}
                   </p>
                 </div>
               </div>
 
               {/* Verified Badge Tag */}
-              <div className="pt-6 border-t border-[#DBC6AD]/60 mt-6 flex items-center justify-center gap-1.5 text-xs font-bold text-[#006838]">
+              <div className="pt-4 border-t border-[#DBC6AD]/60 mt-5 flex items-center justify-center gap-1.5 text-xs font-bold text-[#006838]">
                 <CheckCircle2 className="w-4 h-4 text-[#006838]" />
                 <span>Verified Official Seal</span>
               </div>
@@ -106,3 +114,4 @@ export default function CertificationsSection() {
     </section>
   );
 }
+

@@ -15,7 +15,7 @@ export default function CategorySection() {
             Shop by Category
           </h2>
           <p className="text-sm sm:text-base text-[#171717]/75">
-            Explore our range of authentic miswak, natural oils and traditional products.
+            Explore our range of authentic miswak, miswak extracts, powders and traditional products.
           </p>
         </div>
 

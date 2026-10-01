@@ -11,8 +11,8 @@ export const products: Product[] = [
     compareAtPrice: 600,
     currency: '₹',
     images: [
-      '/lifestyle/about-miswak.png',
-      '/hero/hero-products.png',
+      '/products/product1.jpeg',
+      '/products/al-mutahir.png',
     ],
     specifications: [
       'Length 9 inches | Thickness 14 mm to 20 mm',
@@ -39,8 +39,8 @@ export const products: Product[] = [
     compareAtPrice: 650,
     currency: '₹',
     images: [
-      '/lifestyle/about-miswak.png',
-      '/hero/hero-products.png',
+      '/products/product2.jpeg',
+      '/products/al-haram.png',
     ],
     specifications: [
       'Zaitoon length 9 inches | Thickness 7 mm to 20 mm',
@@ -65,8 +65,8 @@ export const products: Product[] = [
     compareAtPrice: 450,
     currency: '₹',
     images: [
-      '/lifestyle/about-miswak.png',
-      '/hero/hero-products.png',
+      '/products/product3.jpeg',
+      '/products/sewak-al-nusuk.png',
     ],
     specifications: [
       'Length 9 inches | Thickness 14 mm to 20 mm',
@@ -93,8 +93,8 @@ export const products: Product[] = [
     compareAtPrice: 800,
     currency: '₹',
     images: [
-      '/lifestyle/about-miswak.png',
-      '/hero/hero-products.png',
+      '/products/product4.jpeg',
+      '/products/tybakh.png',
     ],
     specifications: [
       '100ml Pure Concentrated Liquid Extract',
@@ -119,8 +119,8 @@ export const products: Product[] = [
     compareAtPrice: 500,
     currency: '₹',
     images: [
-      '/lifestyle/about-miswak.png',
-      '/hero/hero-products.png',
+      '/products/product5.jpeg',
+      '/products/al-mutahir.png',
     ],
     specifications: [
       '100% Pure Organic Miswak Powder (100g Jar)',
@@ -145,8 +145,8 @@ export const products: Product[] = [
     compareAtPrice: 400,
     currency: '₹',
     images: [
-      '/lifestyle/about-miswak.png',
-      '/hero/hero-products.png',
+      '/products/product6.jpeg',
+      '/products/al-haram.png',
     ],
     specifications: [
       'Pack of 10 Pre-Cut Pieces (3-4 inches each)',
@@ -162,4 +162,5 @@ export const products: Product[] = [
     packaging: 'Hygienic Pack of 10 Cut Pieces',
   },
 ];
+
 

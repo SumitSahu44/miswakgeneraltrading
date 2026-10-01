@@ -32,8 +32,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Miswak General Trading Est | Authentic Miswak & Natural Products',
-  description: 'Shop authentic miswak, natural oils and traditional wellness products from Miswak General Trading Est. Fast pan-India shipping, halal certified, 100% natural.',
-  keywords: ['Miswak', 'Miswak sticks', 'Sewak', 'Natural oils', 'Black seed oil', 'Salvadora Persica', 'MGTE', 'Halal wellness'],
+  description: 'Shop authentic miswak and traditional wellness products from Miswak General Trading Est. Fast pan-India shipping, halal certified, 100% natural.',
+  keywords: ['Miswak', 'Miswak sticks', 'Sewak', 'Zaitoon stick', 'Miswak powder', 'Salvadora Persica', 'MGTE', 'Halal wellness'],
   authors: [{ name: 'Miswak General Trading Est' }],
   metadataBase: new URL('https://miswakgeneraltrading.com'),
   icons: {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Miswak General Trading Est | Authentic Miswak & Natural Products',
-    description: 'Supplying authentic miswak, natural oils and traditional products with a commitment to quality and customer satisfaction.',
+    description: 'Supplying authentic miswak, miswak extracts, powders and traditional products with a commitment to quality and customer satisfaction.',
     url: 'https://miswakgeneraltrading.com',
     siteName: 'Miswak General Trading Est (MGTE)',
     images: [
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Miswak General Trading Est',
-    description: 'Shop authentic miswak, natural oils and traditional wellness products from MGTE.',
+    description: 'Shop authentic miswak and traditional wellness products from MGTE.',
     images: ['/hero/hero-products.png'],
   },
 };

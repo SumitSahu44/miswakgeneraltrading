@@ -54,7 +54,7 @@ export default function CartPage() {
             </div>
             <h2 className="font-serif text-2xl font-bold text-[#003D25]">Your Cart is Currently Empty</h2>
             <p className="text-sm text-[#8A8C8F]">
-              Explore our selection of natural miswak sticks, box packs, and pure cold pressed oils.
+              Explore our selection of natural miswak sticks, box packs, extracts and powders.
             </p>
             <div className="pt-4">
               <Link

@@ -82,7 +82,7 @@ export default function CartDrawer() {
                 </div>
                 <h3 className="font-serif text-xl text-[#003D25] font-bold">Your cart is empty</h3>
                 <p className="text-sm text-[#8A8C8F] max-w-xs">
-                  Explore our authentic miswak sticks and natural oils to start shopping.
+                  Explore our authentic miswak sticks and natural wellness products to start shopping.
                 </p>
                 <Link
                   href="/shop"
