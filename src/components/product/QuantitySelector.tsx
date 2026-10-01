@@ -7,20 +7,28 @@ interface QuantitySelectorProps {
   onChange: (newQuantity: number) => void;
   min?: number;
   max?: number;
+  step?: number;
 }
 
 export default function QuantitySelector({
   quantity,
   onChange,
-  min = 1,
-  max = 99,
+  min = 1000,
+  max = 1000000,
+  step = 100,
 }: QuantitySelectorProps) {
   const handleDecrement = () => {
-    if (quantity > min) onChange(quantity - 1);
+    if (quantity - step >= min) {
+      onChange(quantity - step);
+    } else if (quantity > min) {
+      onChange(min);
+    }
   };
 
   const handleIncrement = () => {
-    if (quantity < max) onChange(quantity + 1);
+    if (quantity + step <= max) {
+      onChange(quantity + step);
+    }
   };
 
   return (
@@ -35,8 +43,8 @@ export default function QuantitySelector({
         <Minus className="w-4 h-4" />
       </button>
 
-      <span className="w-12 text-center text-sm font-bold text-[#171717] select-none">
-        {quantity}
+      <span className="w-24 text-center text-xs sm:text-sm font-bold text-[#171717] select-none px-1">
+        {quantity.toLocaleString()} Pcs
       </span>
 
       <button

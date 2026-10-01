@@ -211,34 +211,45 @@ export default function WholesalePage() {
 
           {/* Download Catalog & Minimum Orders Info (5 Cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-[#003D25] text-white rounded-3xl p-8 border border-[#006838]/40 space-y-4">
+            <div className="bg-[#003D25] text-white rounded-3xl p-8 border border-[#006838]/40 space-y-4 shadow-md">
               <FileText className="w-10 h-10 text-[#E5A024]" />
               <h3 className="font-serif text-2xl font-bold">Download Wholesale Catalog</h3>
               <p className="text-xs text-[#EFE5D1]/80 leading-relaxed">
-                Get instant access to our complete product specifications, packaging dimensions, box counts, and export terms.
+                Get instant access to our complete product specifications, packaging dimensions, box counts, and wholesale terms in PDF format.
               </p>
-              <button
-                onClick={() => showToast('MGTE Product Catalog PDF downloaded!')}
-                className="w-full py-3 bg-[#E5A024] hover:bg-[#d4931f] text-[#003D25] font-bold text-xs rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
-              >
-                <span>Download PDF Catalog</span>
-              </button>
+              <div className="flex flex-col gap-2.5 pt-2">
+                <a
+                  href="/miswak_products.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 bg-[#E5A024] hover:bg-[#d4931f] text-[#003D25] font-bold text-xs rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
+                >
+                  <span>👁️ View PDF Catalog</span>
+                </a>
+                <a
+                  href="/miswak_products.pdf"
+                  download="Miswak_Products_Catalog_MGTE.pdf"
+                  className="w-full py-3 bg-[#FFFDF8] hover:bg-[#F6F0E5] text-[#003D25] font-bold text-xs rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
+                >
+                  <span>📥 Download PDF Catalog</span>
+                </a>
+              </div>
             </div>
 
             <div className="bg-white rounded-3xl p-8 border border-[#EFE5D1] space-y-4 shadow-xs">
-              <h3 className="font-serif text-lg font-bold text-[#003D25]">Standard Export MOQs</h3>
+              <h3 className="font-serif text-lg font-bold text-[#003D25]">Standard Wholesale MOQs</h3>
               <ul className="space-y-3 text-xs text-[#171717]/80 divide-y divide-[#EFE5D1]">
                 <li className="pt-2 flex justify-between">
-                  <span>Miswak Sticks (Vacuum Pack)</span>
-                  <span className="font-bold text-[#006838]">500 Packs</span>
+                  <span>Miswak Sticks (Loose / Raw)</span>
+                  <span className="font-bold text-[#006838]">1,000 Pieces</span>
                 </li>
                 <li className="pt-2 flex justify-between">
-                  <span>Box Packs (Multi-Stick)</span>
-                  <span className="font-bold text-[#006838]">250 Boxes</span>
+                  <span>Zaitoon Miswak Sticks</span>
+                  <span className="font-bold text-[#006838]">1,000 Pieces</span>
                 </li>
                 <li className="pt-2 flex justify-between">
-                  <span>Custom OEM Private Label</span>
-                  <span className="font-bold text-[#006838]">2,000 Units</span>
+                  <span>Miswak Powder &amp; Extracts</span>
+                  <span className="font-bold text-[#006838]">1,000 Units</span>
                 </li>
               </ul>
             </div>

@@ -52,14 +52,14 @@ export default function Header() {
             : 'bg-[#F6F0E5]/80 backdrop-blur-xs border-b border-[#DBC6AD]/70 py-4'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-1.5 sm:gap-4 min-w-0">
             
             {/* Mobile Hamburger (Left on mobile) */}
-            <div className="flex items-center gap-2 lg:hidden">
+            <div className="flex items-center lg:hidden shrink-0">
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
-                className="p-2 text-[#003D25] hover:text-[#006838] hover:bg-[#EFE5D1]/50 rounded-lg"
+                className="p-1.5 text-[#003D25] hover:text-[#006838] hover:bg-[#EFE5D1]/50 rounded-lg"
                 aria-label="Open Mobile Menu"
               >
                 <Menu className="w-6 h-6" />
@@ -67,8 +67,8 @@ export default function Header() {
             </div>
 
             {/* LEFT: MGTE Logo */}
-            <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="relative block w-52 sm:w-64 lg:w-72 h-14 sm:h-16 lg:h-18">
+            <div className="shrink min-w-0 flex items-center">
+              <Link href="/" className="relative block w-36 sm:w-56 lg:w-72 h-10 sm:h-14 lg:h-18 max-w-[170px] sm:max-w-none">
                 <Image
                   src="/miswakgeneraltrading-small.jpeg"
                   alt="Miswak General Trading Est (MGTE)"
@@ -189,14 +189,35 @@ export default function Header() {
               >
                 Contact
               </Link>
+
+              {/* Catalog PDF Link */}
+              <a
+                href="/miswak_products.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative font-semibold text-sm text-[#006838] hover:text-[#003D25] transition-colors py-1 flex items-center gap-1 bg-[#EBE0CE]/70 px-3 py-1 rounded-full border border-[#006838]/20"
+                title="View & Download Product Catalog PDF"
+              >
+                <span>📄 Catalog PDF</span>
+              </a>
             </nav>
 
-            {/* RIGHT: Actions (Search) */}
-            <div className="flex items-center gap-3 sm:gap-4">
+            {/* RIGHT: Actions (Search & PDF) */}
+            <div className="flex items-center gap-1.5 sm:gap-4 shrink-0">
+              <a
+                href="/miswak_products.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lg:hidden text-[11px] sm:text-xs font-bold text-[#006838] bg-[#EBE0CE] px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-md border border-[#006838]/20 whitespace-nowrap"
+                title="View PDF Catalog"
+              >
+                📄 PDF
+              </a>
+
               {/* Search */}
               <button
                 onClick={openSearch}
-                className="p-2 text-[#003D25] hover:text-[#006838] hover:bg-[#EFE5D1]/50 rounded-full transition-colors"
+                className="p-1.5 sm:p-2 text-[#003D25] hover:text-[#006838] hover:bg-[#EFE5D1]/50 rounded-full transition-colors"
                 aria-label="Search Products"
                 title="Search"
               >

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Send, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, ChevronRight, Building } from 'lucide-react';
 import { useCartStore } from '@/store/cartStore';
 import { CONTACT_INFO } from '@/data/contactInfo';
 
@@ -61,14 +61,27 @@ export default function ContactPage() {
               </p>
 
               <div className="space-y-4 text-xs">
+                {/* Main Address */}
                 <div className="flex items-start gap-3">
                   <div className="w-9 h-9 rounded-full bg-[#004D2C] flex items-center justify-center text-[#E5A024] shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white text-sm">Location</h4>
+                    <h4 className="font-bold text-white text-sm">Main Office Address</h4>
                     <p className="text-[#EFE5D1]/90 font-semibold">{CONTACT_INFO.companyName}</p>
-                    <p className="text-[#EFE5D1]/80 text-xs leading-relaxed mt-0.5">{CONTACT_INFO.address}</p>
+                    <p className="text-[#EFE5D1]/80 text-xs leading-relaxed mt-0.5">{CONTACT_INFO.mainAddress}</p>
+                  </div>
+                </div>
+
+                {/* Manufacturing Address */}
+                <div className="flex items-start gap-3 pt-1">
+                  <div className="w-9 h-9 rounded-full bg-[#004D2C] flex items-center justify-center text-[#E5A024] shrink-0">
+                    <Building className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white text-sm">Manufacturing Address</h4>
+                    <p className="text-[#EFE5D1]/90 font-semibold">Factory / Production Hub</p>
+                    <p className="text-[#EFE5D1]/80 text-xs leading-relaxed mt-0.5">{CONTACT_INFO.manufacturingAddress}</p>
                   </div>
                 </div>
 

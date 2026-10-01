@@ -1,6 +1,37 @@
 import { Product } from '@/types/product';
 
 export const products: Product[] = [
+  // 1st Product (from product7.jpeg)
+  {
+    id: 'prod-7',
+    slug: 'fresh-miswak-loose-pack',
+    name: 'Fresh Miswak Without Packaging',
+    description: '100% natural fresh miswak sticks delivered raw without any chemical treatment or plastic packaging. Ideal for bulk buyers, distributors, and daily organic oral care routines.',
+    shortDescription: 'Fresh miswak without packaging, 100% natural, without any chemical.',
+    price: 8,
+    compareAtPrice: 12,
+    currency: '₹',
+    images: [
+      '/products/product7.jpeg',
+    ],
+    specifications: [
+      'Minimum Quantity: 1000 pieces (MOQ)',
+      'Thickness: 10 mm to 23 mm',
+      'Rate: ₹8 per piece',
+      '100% Natural & Chemical Free',
+    ],
+    tags: ['100% Natural', 'Chemical Free', 'Fresh Miswak', 'Loose Pack', 'MOQ 1000 Pcs'],
+    inStock: true,
+    featured: true,
+    rating: 5.0,
+    reviewCount: 210,
+    badge: 'BULK BEST SELLER',
+    sku: 'MGTE-RAW-07',
+    origin: 'Mewat, Haryana, India',
+    packaging: 'Loose Bulk (Minimum 1000 Pieces)',
+  },
+
+  // 2nd Product (formerly 1st)
   {
     id: 'prod-1',
     slug: 'miswak',
@@ -12,14 +43,14 @@ export const products: Product[] = [
     currency: '₹',
     images: [
       '/products/product1.jpeg',
-      '/products/al-mutahir.png',
     ],
     specifications: [
+      'Minimum Quantity: 1000 pieces (MOQ)',
       'Length 9 inches | Thickness 14 mm to 20 mm',
       'Length 9 inches | Thickness 7 mm to 14 mm',
       'Length 6 inches | Thickness 7 mm to 14 mm',
     ],
-    tags: ['Authentic', 'Natural', 'Sunnah Care', 'Organic'],
+    tags: ['Authentic', 'Natural', 'Sunnah Care', 'Organic', 'MOQ 1000 Pcs'],
     inStock: true,
     featured: true,
     rating: 4.9,
@@ -27,8 +58,10 @@ export const products: Product[] = [
     badge: 'POPULAR',
     sku: 'MGTE-MSW-01',
     origin: 'Mewat, Haryana, India',
-    packaging: 'Hygienic Foil Pack',
+    packaging: 'Hygienic Foil Pack (Minimum 1000 Pcs)',
   },
+
+  // 3rd Product (formerly 2nd)
   {
     id: 'prod-2',
     slug: 'zaitoon-stick',
@@ -40,12 +73,12 @@ export const products: Product[] = [
     currency: '₹',
     images: [
       '/products/product2.jpeg',
-      '/products/al-haram.png',
     ],
     specifications: [
+      'Minimum Quantity: 1000 pieces (MOQ)',
       'Zaitoon length 9 inches | Thickness 7 mm to 20 mm',
     ],
-    tags: ['Olive Wood', 'Zaitoon', 'Natural', 'Premium'],
+    tags: ['Olive Wood', 'Zaitoon', 'Natural', 'Premium', 'MOQ 1000 Pcs'],
     inStock: true,
     featured: true,
     rating: 5.0,
@@ -53,8 +86,10 @@ export const products: Product[] = [
     badge: 'BEST SELLER',
     sku: 'MGTE-ZAT-02',
     origin: 'Rajasthan, India',
-    packaging: 'Single Protective Wrap',
+    packaging: 'Single Protective Wrap (Minimum 1000 Pcs)',
   },
+
+  // 4th Product (formerly 3rd)
   {
     id: 'prod-3',
     slug: 'fresh-miswak-without-packaging',
@@ -66,14 +101,14 @@ export const products: Product[] = [
     currency: '₹',
     images: [
       '/products/product3.jpeg',
-      '/products/sewak-al-nusuk.png',
     ],
     specifications: [
+      'Minimum Quantity: 1000 pieces (MOQ)',
       'Length 9 inches | Thickness 14 mm to 20 mm',
       'Length 9 inches | Thickness 7 mm to 14 mm',
       'Length 6 inches | Thickness 7 mm to 14 mm',
     ],
-    tags: ['Eco-Friendly', 'Zero Waste', 'Fresh Cut', 'Unpackaged'],
+    tags: ['Eco-Friendly', 'Zero Waste', 'Fresh Cut', 'Unpackaged', 'MOQ 1000 Pcs'],
     inStock: true,
     featured: true,
     rating: 4.8,
@@ -81,8 +116,10 @@ export const products: Product[] = [
     badge: 'ECO CHOICE',
     sku: 'MGTE-RAW-03',
     origin: 'Haryana, India',
-    packaging: 'No Plastic Packaging (Bulk / Loose)',
+    packaging: 'No Plastic Packaging (Minimum 1000 Pcs)',
   },
+
+  // 5th Product (formerly 4th)
   {
     id: 'prod-4',
     slug: 'miswak-extracts',
@@ -93,13 +130,13 @@ export const products: Product[] = [
     compareAtPrice: 800,
     currency: '₹',
     images: [
-      '/products/product4.jpeg',
-      '/products/tybakh.png',
+      '/products/product4.png',
     ],
     specifications: [
+      'Minimum Quantity: 1000 units (MOQ)',
       '100ml Pure Concentrated Liquid Extract',
     ],
-    tags: ['Extract', 'Pure Liquid', 'Concentrate', 'Gum Care'],
+    tags: ['Extract', 'Pure Liquid', 'Concentrate', 'Gum Care', 'MOQ 1000 Pcs'],
     inStock: true,
     featured: true,
     rating: 4.9,
@@ -107,8 +144,10 @@ export const products: Product[] = [
     badge: '100% PURE',
     sku: 'MGTE-EXT-04',
     origin: 'Haryana, India',
-    packaging: '100ml Amber Bottle',
+    packaging: '100ml Amber Bottle (Minimum 1000 Units)',
   },
+
+  // 6th Product (formerly 5th)
   {
     id: 'prod-5',
     slug: 'miswak-powder',
@@ -120,12 +159,12 @@ export const products: Product[] = [
     currency: '₹',
     images: [
       '/products/product5.jpeg',
-      '/products/al-mutahir.png',
     ],
     specifications: [
+      'Minimum Quantity: 1000 units (MOQ)',
       '100% Pure Organic Miswak Powder (100g Jar)',
     ],
-    tags: ['Organic Powder', 'Teeth Whitening', 'Sunnah Wellness'],
+    tags: ['Organic Powder', 'Teeth Whitening', 'Sunnah Wellness', 'MOQ 1000 Pcs'],
     inStock: true,
     featured: true,
     rating: 4.9,
@@ -133,8 +172,10 @@ export const products: Product[] = [
     badge: 'ORGANIC',
     sku: 'MGTE-PWD-05',
     origin: 'Haryana, India',
-    packaging: '100g Sealed Container',
+    packaging: '100g Sealed Container (Minimum 1000 Units)',
   },
+
+  // 7th Product (formerly 6th)
   {
     id: 'prod-6',
     slug: 'miswak-cut-pieces',
@@ -146,12 +187,12 @@ export const products: Product[] = [
     currency: '₹',
     images: [
       '/products/product6.jpeg',
-      '/products/al-haram.png',
     ],
     specifications: [
+      'Minimum Quantity: 1000 packs (MOQ)',
       'Pack of 10 Pre-Cut Pieces (3-4 inches each)',
     ],
-    tags: ['Pre-Cut', 'Convenient', 'Travel Friendly'],
+    tags: ['Pre-Cut', 'Convenient', 'Travel Friendly', 'MOQ 1000 Pcs'],
     inStock: true,
     featured: true,
     rating: 4.7,
@@ -159,8 +200,40 @@ export const products: Product[] = [
     badge: 'READY USE',
     sku: 'MGTE-CUT-06',
     origin: 'Haryana, India',
-    packaging: 'Hygienic Pack of 10 Cut Pieces',
+    packaging: 'Hygienic Pack of 10 Cut Pieces (Minimum 1000 Packs)',
+  },
+
+  // 8th Product (from product8.jpeg)
+  {
+    id: 'prod-8',
+    slug: 'zaitoon-miswak-9-inch-premium',
+    name: 'Zaitoon Miswak',
+    description: 'Authentic 9-inch Zaitoon (wild olive wood) miswak stick. Harvested from mature olive wood roots for superior bristle density and long-lasting natural freshness.',
+    shortDescription: 'Zaitoon miswak length 9 inches, thickness 8 mm to 20 mm, rate ₹18 per piece.',
+    price: 18,
+    compareAtPrice: 25,
+    currency: '₹',
+    images: [
+      '/products/product8.jpeg',
+    ],
+    specifications: [
+      'Minimum Quantity: 1000 pieces (MOQ)',
+      'Length: 9 inches',
+      'Thickness: 8 mm to 20 mm',
+      'Rate: ₹18 per piece',
+      '100% Wild Olive Wood (Zaitoon)',
+    ],
+    tags: ['Zaitoon Miswak', '9 Inches', 'Olive Wood', 'Premium Grade', 'MOQ 1000 Pcs'],
+    inStock: true,
+    featured: true,
+    rating: 5.0,
+    reviewCount: 185,
+    badge: 'ZAITOON SPECIAL',
+    sku: 'MGTE-ZAT-08',
+    origin: 'Rajasthan, India',
+    packaging: 'Hygienic Protective Wrap (Minimum 1000 Pcs)',
   },
 ];
+
 
 

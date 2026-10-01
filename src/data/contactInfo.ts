@@ -6,7 +6,9 @@ export const CONTACT_INFO = {
   whatsappNumber: '919729137786',
   email: 'miswakgeneraltrading@gmail.com',
   website: 'miswakgeneraltrading.com',
-  address: 'Kila No 99/23/1 & 99/22/22, Tehsil-Ferozpur Jhirka, Sub TehsilNagina, Nagina, Mewat, Haryana, 122108',
+  mainAddress: 'First Floor One Shop No F-7, Property No 156/3 Okhla Road, Batla House, New Delhi, South Delhi - 110025',
+  manufacturingAddress: 'Kila No 99/23/1 & 99/22/22, Tehsil-Ferozpur Jhirka, Sub Tehsil Nagina, Nagina, Mewat, Haryana - 122108',
+  address: 'First Floor One Shop No F-7, Property No 156/3 Okhla Road, Batla House, New Delhi, South Delhi - 110025',
 };
 
 export function getWhatsAppOrderLink(
@@ -35,9 +37,9 @@ export function getWhatsAppOrderLink(
 export function getSingleProductWhatsAppLink(
   productName: string,
   price: number,
-  quantity: number = 1
+  quantity: number = 1000
 ): string {
   const total = price * quantity;
-  const message = `Hello Miswak General Trading Est,\n\nI would like to order:\n*Product:* ${productName}\n*Quantity:* ${quantity}\n*Price:* ₹${price.toLocaleString()} each\n*Total Amount:* ₹${total.toLocaleString()}\n\nPlease confirm my order and share delivery details. Thank you!`;
+  const message = `Hello Miswak General Trading Est,\n\nI would like to order:\n*Product:* ${productName}\n*Quantity:* ${quantity.toLocaleString()} Pcs\n*Price:* ₹${price.toLocaleString()} each\n*Total Amount:* ₹${total.toLocaleString()}\n\nPlease confirm my order and share delivery details. Thank you!`;
   return `https://wa.me/${CONTACT_INFO.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }

@@ -78,17 +78,20 @@ export default function ProductCard({ product }: ProductCardProps) {
                 </span>
               )}
             </div>
+            <span className="text-[10px] font-bold text-[#006838] bg-[#EBE0CE] px-2 py-0.5 rounded-md">
+              MOQ: 1,000 Pcs
+            </span>
           </div>
 
           <a
-            href={getSingleProductWhatsAppLink(product.name, product.price, 1)}
+            href={getSingleProductWhatsAppLink(product.name, product.price, 1000)}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
             className="w-full py-2.5 px-3 bg-[#25D366] hover:bg-[#20bd5a] active:scale-98 text-white font-bold text-xs rounded-xl shadow-xs transition-all flex items-center justify-center gap-1.5"
           >
             <MessageCircle className="w-4 h-4 fill-current shrink-0" />
-            <span>Order on WhatsApp</span>
+            <span>Order on WhatsApp (1000 Pcs)</span>
           </a>
         </div>
 

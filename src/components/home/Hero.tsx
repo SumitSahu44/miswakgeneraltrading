@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Leaf, Award, CheckCircle2, Globe, Sparkles } from 'lucide-react';
+import { ArrowRight, Leaf, Award, CheckCircle2, Globe } from 'lucide-react';
+import ProductCatalogBanner from '@/components/home/ProductCatalogBanner';
 
 export default function Hero() {
   const trustIndicators = [
@@ -23,13 +24,13 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative overflow-hidden pt-6 pb-16 lg:py-16 border-b border-[#DBC6AD]/60">
+    <section className="relative overflow-hidden pt-6 pb-12 lg:py-16 border-b border-[#DBC6AD]/60">
       {/* Background Arch Motif Effect */}
       <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-[#EBE0CE]/40 rounded-bl-[100px] pointer-events-none -z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
 
-        {/* Direct Centered Header Announcement Text (As per Image) */}
+        {/* Direct Centered Header Announcement Text */}
         <div className="text-center max-w-5xl mx-auto space-y-3 pt-2 pb-6 border-b border-[#DBC6AD]/40">
           <p className="text-sm sm:text-base lg:text-lg text-[#1C1814] font-medium leading-snug">
             Miswak General Trading Est is one of the best miswak manufacturer in India, because of its high quality and low price
@@ -42,7 +43,8 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Hero Main 2-Column Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
           {/* LEFT SIDE (7 Cols) */}
           <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
@@ -96,22 +98,94 @@ export default function Hero() {
 
           </div>
 
-          {/* RIGHT SIDE (5 Cols) - Direct Product Image (No Border, No Shadow, No Box) */}
-          <div className="lg:col-span-5 relative flex justify-center items-center w-full">
-            <div className="relative w-full max-w-md lg:max-w-xl xl:max-w-2xl aspect-[4/3.2] lg:aspect-[4/3]">
+          {/* RIGHT SIDE (5 Cols) - Main Product Image & Stick Image */}
+          <div className="lg:col-span-5 flex flex-col items-center justify-center space-y-4 w-full">
+            {/* Main Product Box Image */}
+            <div className="relative w-full max-w-md lg:max-w-xl aspect-[4/3.2] lg:aspect-[4/3]">
               <Image
                 src="/hero/hero_right.png"
                 alt="MGTE Authentic Miswak & Natural Products Composition"
                 fill
                 priority
-                sizes="(max-width: 1024px) 100vw, 55vw"
-                className="object-contain transition-transform duration-500 hover:scale-103"
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="object-contain"
+              />
+            </div>
+
+            {/* Miswak Stick Image (stick.png) shown directly under hero image on mobile & desktop */}
+            <div className="relative w-full max-w-sm h-20 sm:h-24">
+              <Image
+                src="/hero/stick.png"
+                alt="Authentic Miswak Stick"
+                fill
+                className="object-contain"
               />
             </div>
           </div>
 
         </div>
+
+        {/* SIMPLE CLEAN TEXT SPECIFICATIONS (No heavy boxes, simple text with divider lines) */}
+        <div className="pt-8 border-t border-[#DBC6AD]/80">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 md:divide-x md:divide-[#DBC6AD]/80 text-center md:text-left">
+
+            {/* Item 1 */}
+            <div className="space-y-1.5 md:pr-8">
+              <h3 className="font-serif text-lg font-bold text-[#003D25]">
+                Single piece packaging
+              </h3>
+              <p className="text-sm text-[#1C1814]/80">
+                Length: <span className="font-semibold text-[#003D25]">6 inches</span>
+              </p>
+              <p className="text-sm text-[#1C1814]/80">
+                Thickness: <span className="font-semibold text-[#003D25]">7 mm to 14 mm</span>
+              </p>
+              <p className="text-base font-bold text-[#006838] pt-1">
+                Rate: ₹5 per piece
+              </p>
+            </div>
+
+            {/* Item 2 */}
+            <div className="space-y-1.5 md:px-8 pt-6 md:pt-0 border-t border-[#DBC6AD]/50 md:border-t-0">
+              <h3 className="font-serif text-lg font-bold text-[#003D25]">
+                Single piece packaging
+              </h3>
+              <p className="text-sm text-[#1C1814]/80">
+                Length: <span className="font-semibold text-[#003D25]">9 inches</span>
+              </p>
+              <p className="text-sm text-[#1C1814]/80">
+                Thickness: <span className="font-semibold text-[#003D25]">10 mm to 22 mm</span>
+              </p>
+              <p className="text-base font-bold text-[#006838] pt-1">
+                Rate: ₹10 per piece
+              </p>
+            </div>
+
+            {/* Item 3 */}
+            <div className="space-y-1.5 md:pl-8 pt-6 md:pt-0 border-t border-[#DBC6AD]/50 md:border-t-0">
+              <h3 className="font-serif text-lg font-bold text-[#003D25]">
+                Zaitoon miswak
+              </h3>
+              <p className="text-sm text-[#1C1814]/80">
+                Length: <span className="font-semibold text-[#003D25]">9 inches</span>
+              </p>
+              <p className="text-sm text-[#1C1814]/80">
+                Thickness: <span className="font-semibold text-[#003D25]">8 mm to 20 mm</span>
+              </p>
+              <p className="text-base font-bold text-[#006838] pt-1">
+                Rate: ₹18 per piece
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        {/* High visibility PDF Catalog Banner right after stick image and pricing section */}
+        <ProductCatalogBanner />
+
       </div>
     </section>
   );
 }
+
+

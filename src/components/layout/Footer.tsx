@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Building } from 'lucide-react';
 import { CONTACT_INFO } from '@/data/contactInfo';
 
 export default function Footer() {
@@ -169,7 +169,17 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#E5A024] shrink-0 mt-0.5" />
-                <span className="text-xs leading-relaxed">{CONTACT_INFO.address}</span>
+                <div className="text-xs leading-relaxed">
+                  <span className="text-white font-semibold block">Main Address:</span>
+                  <span className="text-[#EFE5D1]/85">{CONTACT_INFO.mainAddress}</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5 pt-1 border-t border-[#006838]/30">
+                <Building className="w-4 h-4 text-[#E5A024] shrink-0 mt-0.5" />
+                <div className="text-xs leading-relaxed">
+                  <span className="text-white font-semibold block">Manufacturing Address:</span>
+                  <span className="text-[#EFE5D1]/85">{CONTACT_INFO.manufacturingAddress}</span>
+                </div>
               </div>
             </div>
           </div>

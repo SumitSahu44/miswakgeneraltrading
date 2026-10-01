@@ -25,7 +25,7 @@ export const categories: Category[] = [
     name: 'Extracts & Powders',
     shortDescription: '100% Pure miswak extracts & powder',
     description: 'Pure Salvadora Persica root extracts and ultra-fine oral care powders for enamel whitening and gum care.',
-    image: '/products/product4.jpeg',
+    image: '/products/product4.png',
     itemCount: 6,
   },
   {

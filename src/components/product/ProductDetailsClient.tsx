@@ -17,7 +17,7 @@ interface ProductDetailsClientProps {
 export default function ProductDetailsClient({ slug }: ProductDetailsClientProps) {
   const product = products.find((p) => p.slug === slug);
 
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1000);
   const [selectedSpecIndex, setSelectedSpecIndex] = useState(0);
   const [activeTab, setActiveTab] = useState<'desc' | 'details' | 'shipping' | 'faq'>('desc');
 
@@ -144,11 +144,16 @@ export default function ProductDetailsClient({ slug }: ProductDetailsClientProps
 
             {/* Quantity Selector & Action Buttons */}
             <div className="space-y-4 pt-2">
-              <div className="flex items-center gap-4">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#8A8C8F]">
-                  Quantity:
-                </span>
-                <QuantitySelector quantity={quantity} onChange={setQuantity} />
+              <div className="flex flex-wrap items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#8A8C8F]">
+                    Quantity:
+                  </span>
+                  <span className="text-[11px] font-bold text-[#006838] bg-[#EBE0CE] px-2 py-0.5 rounded-md">
+                    MOQ: 1,000 Pcs
+                  </span>
+                </div>
+                <QuantitySelector quantity={quantity} onChange={setQuantity} min={1000} step={100} />
               </div>
 
               <div className="pt-2">

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { X, Search, ChevronRight, ChevronDown, Phone, Mail, MapPin, Package } from 'lucide-react';
+import { X, Search, ChevronRight, ChevronDown, Phone, Mail, MapPin, Package, Building } from 'lucide-react';
 import { useCartStore } from '@/store/cartStore';
 import { CONTACT_INFO } from '@/data/contactInfo';
 import { products } from '@/data/products';
@@ -156,6 +156,18 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <span>Contact</span>
             <ChevronRight className="w-4 h-4 text-[#8A8C8F]" />
           </Link>
+
+          {/* PDF Catalog Download */}
+          <a
+            href="/miswak_products.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
+            className="flex items-center justify-between px-4 py-3 text-[#006838] bg-[#EBE0CE]/70 border border-[#006838]/20 font-bold rounded-lg transition-colors text-sm mt-2"
+          >
+            <span>📄 View &amp; Download PDF Catalog</span>
+            <ChevronRight className="w-4 h-4 text-[#006838]" />
+          </a>
         </div>
 
         {/* Contact Info Footer */}
@@ -173,9 +185,19 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               {CONTACT_INFO.phone}
             </a>
           </div>
-          <div className="flex items-start gap-2 text-[#EFE5D1]/90">
+          <div className="flex items-start gap-2 text-[#EFE5D1]/90 pt-1 border-t border-[#006838]/30">
             <MapPin className="w-3.5 h-3.5 text-[#E5A024] shrink-0 mt-0.5" />
-            <span className="text-[11px] leading-tight">{CONTACT_INFO.address}</span>
+            <div className="text-[11px] leading-tight">
+              <span className="font-semibold text-white block">Main Address:</span>
+              <span>{CONTACT_INFO.mainAddress}</span>
+            </div>
+          </div>
+          <div className="flex items-start gap-2 text-[#EFE5D1]/90 pt-1">
+            <Building className="w-3.5 h-3.5 text-[#E5A024] shrink-0 mt-0.5" />
+            <div className="text-[11px] leading-tight">
+              <span className="font-semibold text-white block">Manufacturing Address:</span>
+              <span>{CONTACT_INFO.manufacturingAddress}</span>
+            </div>
           </div>
         </div>
       </div>

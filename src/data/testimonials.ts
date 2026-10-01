@@ -2,10 +2,50 @@ import { Testimonial } from '@/types/product';
 
 export const testimonials: Testimonial[] = [
   {
+    id: 'test-saudi',
+    name: 'Sheikh Abdullah Al-Mansoor',
+    location: 'Riyadh, Saudi Arabia',
+    avatar: '/testimonials/avatar1.svg',
+    rating: 5,
+    quote: 'We import wholesale vacuum-sealed Miswak from MGTE for our retail distribution in Riyadh and Jeddah. High density bristles, long shelf life, and superb factory quality.',
+  },
+  {
+    id: 'test-dubai',
+    name: 'Tariq Al-Hashimi',
+    location: 'Dubai, United Arab Emirates',
+    avatar: '/testimonials/avatar3.svg',
+    rating: 5,
+    quote: 'Outstanding miswak quality and export packaging! Their Tybakh and Zaitoon sticks are very popular among our clients in Dubai. Fast shipment and direct rates.',
+  },
+  {
+    id: 'test-egypt',
+    name: 'Dr. Hassan El-Sayed',
+    location: 'Cairo, Egypt',
+    avatar: '/testimonials/avatar2.svg',
+    rating: 5,
+    quote: 'Fresh, 100% natural Salvadora Persica roots. The moisture retention inside single-piece vacuum packs is top notch. Delivery to Cairo arrived in perfect condition.',
+  },
+  {
+    id: 'test-qatar',
+    name: 'Youssef Al-Kuwari',
+    location: 'Doha, Qatar',
+    avatar: '/testimonials/avatar4.svg',
+    rating: 5,
+    quote: 'Direct manufacturer pricing with guaranteed authentic quality. MGTE has been our trusted international supplier for bulk orders for over 2 years now.',
+  },
+  {
+    id: 'test-oman',
+    name: 'Omar Al-Farsi',
+    location: 'Muscat, Oman',
+    avatar: '/testimonials/avatar1.svg',
+    rating: 5,
+    quote: 'Great natural aroma and excellent bristle density. The wholesale box packaging met all our Middle-East customs import compliance requirements seamlessly.',
+  },
+  {
     id: 'test-1',
     name: 'Mohammad Zaid',
     location: 'Lucknow, Uttar Pradesh',
-    avatar: '/testimonials/avatar1.svg',
+    avatar: '/testimonials/avatar3.svg',
     rating: 5,
     quote: 'Excellent quality miswak sticks. Very fresh and authentic. Highly recommended for anyone seeking true natural oral hygiene.',
   },
@@ -17,21 +57,6 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     quote: 'Reliable supplier with premium products. Packaging is great and delivery was on time. The Tybakh miswak is top tier.',
   },
-  {
-    id: 'test-3',
-    name: 'Imran Sheikh',
-    location: 'Ahmedabad, Gujarat',
-    avatar: '/testimonials/avatar3.svg',
-    rating: 5,
-    quote: 'Best natural miswak I have used. Great quality and value for money. Wholesale bulk order process was seamless.',
-  },
-  {
-    id: 'test-4',
-    name: 'Rajesh Patel',
-    location: 'Bengaluru, Karnataka',
-    avatar: '/testimonials/avatar4.svg',
-    rating: 5,
-    quote: 'Authentic Salvadora Persica cuts with high moisture content. MGTE packaging keeps every stick fresh for months.',
-  },
 ];
+
 

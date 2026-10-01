@@ -31,7 +31,7 @@ export const useCartStore = create<CartState>()(
       isSearchOpen: false,
       toastMessage: null,
 
-      addItem: (product: Product, quantity = 1) => {
+      addItem: (product: Product, quantity = 1000) => {
         const currentItems = get().items;
         const existingIndex = currentItems.findIndex(i => i.product.id === product.id);
 
@@ -40,7 +40,7 @@ export const useCartStore = create<CartState>()(
           newItems = [...currentItems];
           newItems[existingIndex].quantity += quantity;
         } else {
-          newItems = [...currentItems, { product, quantity }];
+          newItems = [...currentItems, { product, quantity: Math.max(quantity, 1000) }];
         }
 
         set({
@@ -63,9 +63,10 @@ export const useCartStore = create<CartState>()(
           get().removeItem(productId);
           return;
         }
+        const validQty = Math.max(quantity, 1000);
         set({
           items: get().items.map(i =>
-            i.product.id === productId ? { ...i, quantity } : i
+            i.product.id === productId ? { ...i, quantity: validQty } : i
           ),
         });
       },
