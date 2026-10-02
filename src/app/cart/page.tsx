@@ -104,7 +104,6 @@ export default function CartPage() {
                           </h3>
                         </Link>
                         <p className="text-xs text-[#8A8C8F] mt-0.5">{product.category}</p>
-                        <p className="text-xs font-semibold text-[#006838] mt-1">₹{product.price} each</p>
                       </div>
                     </div>
 
@@ -117,7 +116,7 @@ export default function CartPage() {
                         >
                           <Minus className="w-3.5 h-3.5" />
                         </button>
-                        <span className="px-3 text-xs font-bold text-[#171717]">{quantity}</span>
+                        <span className="px-3 text-xs font-bold text-[#171717]">{quantity} Pcs</span>
                         <button
                           onClick={() => updateQuantity(product.id, quantity + 1)}
                           className="px-3 py-1.5 hover:bg-[#EFE5D1] text-[#003D25]"
@@ -126,11 +125,8 @@ export default function CartPage() {
                         </button>
                       </div>
 
-                      {/* Subtotal & Delete */}
+                      {/* Delete */}
                       <div className="flex items-center gap-4">
-                        <span className="font-bold text-base text-[#003D25]">
-                          ₹{(product.price * quantity).toLocaleString()}
-                        </span>
                         <button
                           onClick={() => removeItem(product.id)}
                           className="text-[#8A8C8F] hover:text-red-600 transition-colors p-1"
@@ -149,63 +145,15 @@ export default function CartPage() {
             {/* ORDER SUMMARY (4 Cols) */}
             <div className="lg:col-span-4 bg-white rounded-3xl p-6 sm:p-8 border border-[#EFE5D1] shadow-sm space-y-6">
               <h2 className="font-serif text-xl font-bold text-[#003D25] pb-4 border-b border-[#EFE5D1]">
-                Order Summary
+                Direct WhatsApp Order
               </h2>
 
-              {/* Promo Code Input */}
-              <form onSubmit={handleApplyPromo} className="space-y-2">
-                <label className="block text-xs font-bold text-[#003D25] uppercase tracking-wider">
-                  Promo / Coupon Code
-                </label>
-                <div className="flex gap-2">
-                  <div className="relative flex-1">
-                    <Tag className="w-4 h-4 text-[#8A8C8F] absolute left-3 top-3" />
-                    <input
-                      type="text"
-                      value={promoCode}
-                      onChange={(e) => setPromoCode(e.target.value)}
-                      placeholder="Try 'MGTE10'"
-                      className="w-full pl-9 pr-3 py-2.5 bg-[#F8F4E9] border border-[#8A8C8F]/30 rounded-xl text-xs uppercase font-bold focus:outline-none focus:border-[#006838]"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="px-4 py-2.5 bg-[#003D25] hover:bg-[#004D2C] text-white font-bold text-xs rounded-xl"
-                  >
-                    Apply
-                  </button>
-                </div>
-              </form>
-
-              {/* Summary Breakdown */}
-              <div className="space-y-3 pt-4 border-t border-[#EFE5D1] text-xs">
-                <div className="flex justify-between text-[#171717]/80">
-                  <span>Subtotal</span>
-                  <span className="font-bold text-[#171717]">₹{subtotal.toLocaleString()}</span>
-                </div>
-
-                {discount > 0 && (
-                  <div className="flex justify-between text-green-700">
-                    <span>Discount (10%)</span>
-                    <span className="font-bold">-₹{discount.toLocaleString()}</span>
-                  </div>
-                )}
-
-                <div className="flex justify-between text-[#171717]/80">
-                  <span>Estimated Shipping</span>
-                  <span className="font-bold text-[#006838]">
-                    {shippingFee === 0 ? 'FREE' : `₹${shippingFee}`}
-                  </span>
-                </div>
-
-                <div className="flex justify-between text-base font-bold text-[#003D25] pt-3 border-t border-[#EFE5D1]">
-                  <span>Grand Total</span>
-                  <span className="text-[#006838]">₹{grandTotal.toLocaleString()}</span>
-                </div>
-              </div>
+              <p className="text-xs text-[#8A8C8F] leading-relaxed">
+                Click below to send your selected items directly to our sales team on WhatsApp to confirm availability and current wholesale pricing.
+              </p>
 
               <a
-                href={getWhatsAppOrderLink(items, grandTotal)}
+                href={getWhatsAppOrderLink(items)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm rounded-2xl shadow-md transition-all flex items-center justify-center gap-2"

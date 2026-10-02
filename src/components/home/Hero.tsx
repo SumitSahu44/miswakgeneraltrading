@@ -33,10 +33,10 @@ export default function Hero() {
         {/* Direct Centered Header Announcement Text */}
         <div className="text-center max-w-5xl mx-auto space-y-3 pt-2 pb-6 border-b border-[#DBC6AD]/40">
           <p className="text-sm sm:text-base lg:text-lg text-[#1C1814] font-medium leading-snug">
-            Miswak General Trading Est is one of the best miswak manufacturer in India, because of its high quality and low price
+            Miswak General Trading Est is one of the best miswak manufacturers in India, known for its authentic premium quality
           </p>
           <p className="text-base sm:text-xl lg:text-2xl xl:text-3xl font-bold text-[#1E40AF] uppercase tracking-wide leading-tight">
-            ALL DETAILS OF PRICES, PACKAGES AND DELIVERY ARE AVAILABLE ON OUR WEBSITE:{' '}
+            ALL DETAILS OF PRODUCTS, PACKAGES AND DELIVERY ARE AVAILABLE ON OUR WEBSITE:{' '}
             <a href="https://miswakgeneraltrading.com" className="underline hover:text-[#1d4ed8]">
               MISWAKGENERALTRADING.COM
             </a>
@@ -140,9 +140,6 @@ export default function Hero() {
               <p className="text-sm text-[#1C1814]/80">
                 Thickness: <span className="font-semibold text-[#003D25]">7 mm to 14 mm</span>
               </p>
-              <p className="text-base font-bold text-[#006838] pt-1">
-                Rate: ₹5 per piece
-              </p>
             </div>
 
             {/* Item 2 */}
@@ -156,9 +153,6 @@ export default function Hero() {
               <p className="text-sm text-[#1C1814]/80">
                 Thickness: <span className="font-semibold text-[#003D25]">10 mm to 22 mm</span>
               </p>
-              <p className="text-base font-bold text-[#006838] pt-1">
-                Rate: ₹10 per piece
-              </p>
             </div>
 
             {/* Item 3 */}
@@ -171,9 +165,6 @@ export default function Hero() {
               </p>
               <p className="text-sm text-[#1C1814]/80">
                 Thickness: <span className="font-semibold text-[#003D25]">8 mm to 20 mm</span>
-              </p>
-              <p className="text-base font-bold text-[#006838] pt-1">
-                Rate: ₹18 per piece
               </p>
             </div>
 

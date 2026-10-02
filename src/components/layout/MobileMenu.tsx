@@ -132,7 +132,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     className="flex items-center justify-between px-3 py-2 text-xs font-medium text-[#171717] hover:text-[#006838] hover:bg-white rounded-lg transition-colors"
                   >
                     <span>• {item.name}</span>
-                    <span className="text-[11px] font-bold text-[#006838]">₹{item.price}</span>
                   </Link>
                 ))}
 

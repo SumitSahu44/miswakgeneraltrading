@@ -18,21 +18,21 @@ export default function ProductCatalogBanner() {
           </div>
 
           <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#FFFDF8] leading-tight">
-            Complete Miswak Products &amp; Wholesale Price List
+            Complete Miswak Products Catalog &amp; Specifications
           </h2>
 
           <p className="text-sm sm:text-base text-[#EFE5D1]/90 max-w-2xl leading-relaxed">
-            Download or view our detailed product catalog in high-resolution PDF format. Contains full product specifications, sizes, packaging options, and wholesale rates.
+            Download or view our detailed product catalog in high-resolution PDF format. Contains full product specifications, sizes, and packaging options.
           </p>
 
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-1 text-xs text-[#EFE5D1]">
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-[#25D366]" />
-              <span>All 8 Product Variants Included</span>
+              <span>All 7 Product Variants Included</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-[#25D366]" />
-              <span>Wholesale &amp; Retail Pricing</span>
+              <span>Full Technical Specifications</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-[#25D366]" />

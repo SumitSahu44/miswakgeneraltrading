@@ -15,7 +15,7 @@ export const testimonials: Testimonial[] = [
     location: 'Dubai, United Arab Emirates',
     avatar: '/testimonials/avatar3.svg',
     rating: 5,
-    quote: 'Outstanding miswak quality and export packaging! Their Tybakh and Zaitoon sticks are very popular among our clients in Dubai. Fast shipment and direct rates.',
+    quote: 'Outstanding miswak quality and export packaging! Their Tybakh and Zaitoon sticks are very popular among our clients in Dubai. Fast shipment and direct supply.',
   },
   {
     id: 'test-egypt',
@@ -31,7 +31,7 @@ export const testimonials: Testimonial[] = [
     location: 'Doha, Qatar',
     avatar: '/testimonials/avatar4.svg',
     rating: 5,
-    quote: 'Direct manufacturer pricing with guaranteed authentic quality. MGTE has been our trusted international supplier for bulk orders for over 2 years now.',
+    quote: 'Direct manufacturer supply with guaranteed authentic quality. MGTE has been our trusted international supplier for bulk orders for over 2 years now.',
   },
   {
     id: 'test-oman',

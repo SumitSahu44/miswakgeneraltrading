@@ -86,7 +86,7 @@ export default function SearchModal() {
               <div className="space-y-4">
                 <p className="text-xs font-semibold text-[#8A8C8F] uppercase tracking-wider">Popular Searches</p>
                 <div className="flex flex-wrap gap-2">
-                  {['Miswak Stick', 'Zaitoon Stick', 'Miswak Powder', 'Miswak Extract', 'Raw Cut Miswak'].map(tag => (
+                  {['Miswak Stick', 'Zaitoon Miswak', 'Miswak Powder', 'Miswak Extract', 'Raw Cut Miswak'].map(tag => (
                     <button
                       key={tag}
                       onClick={() => setQuery(tag)}
@@ -125,7 +125,6 @@ export default function SearchModal() {
                       </h4>
                       <p className="text-xs text-[#8A8C8F]">{product.specifications?.[0] || '100% Natural'}</p>
                     </div>
-                    <p className="text-sm font-semibold text-[#006838]">₹{product.price}</p>
                   </Link>
                 ))}
 

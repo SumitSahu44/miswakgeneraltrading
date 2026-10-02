@@ -17,14 +17,6 @@ export async function getProducts(options?: ProductFilterOptions): Promise<Produ
     result = result.filter(p => p.inStock);
   }
 
-  if (options.minPrice !== undefined) {
-    result = result.filter(p => p.price >= (options.minPrice || 0));
-  }
-
-  if (options.maxPrice !== undefined) {
-    result = result.filter(p => p.price <= (options.maxPrice || Infinity));
-  }
-
   if (options.searchQuery && options.searchQuery.trim() !== '') {
     const q = options.searchQuery.toLowerCase().trim();
     result = result.filter(
@@ -37,12 +29,6 @@ export async function getProducts(options?: ProductFilterOptions): Promise<Produ
 
   if (options.sortBy) {
     switch (options.sortBy) {
-      case 'price-low':
-        result.sort((a, b) => a.price - b.price);
-        break;
-      case 'price-high':
-        result.sort((a, b) => b.price - a.price);
-        break;
       case 'newest':
         result.reverse();
         break;

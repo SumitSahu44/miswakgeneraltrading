@@ -65,13 +65,42 @@ export default function Footer() {
                 </svg>
               </a>
 
+              {/* Twitter / X */}
+              <a
+                href={CONTACT_INFO.socialLinks?.twitter || "https://x.com/MiswakEst"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-[#004D2C] hover:bg-[#E5A024] hover:text-[#003D25] text-[#EFE5D1] flex items-center justify-center transition-all"
+                aria-label="X (Twitter)"
+                title="Follow us on X (Twitter)"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+
+              {/* Telegram */}
+              <a
+                href={CONTACT_INFO.socialLinks?.telegram || "https://t.me/miswakgeneraltrading"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-[#004D2C] hover:bg-[#E5A024] hover:text-[#003D25] text-[#EFE5D1] flex items-center justify-center transition-all"
+                aria-label="Telegram"
+                title="Join our Telegram channel"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.37-.49 1.02-.75 3.99-1.74 6.66-2.89 8.01-3.45 3.81-1.59 4.6-.1.87 4.6.87z"/>
+                </svg>
+              </a>
+
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/in/miswak-general-trading-est-571a79313?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                href={CONTACT_INFO.socialLinks?.linkedin || "https://www.linkedin.com/in/miswak-general-trading-est-571a79313?utm_source=share_via&utm_content=profile&utm_medium=member_android"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-[#004D2C] hover:bg-[#E5A024] hover:text-[#003D25] text-[#EFE5D1] flex items-center justify-center transition-all"
                 aria-label="LinkedIn"
+                title="LinkedIn"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>

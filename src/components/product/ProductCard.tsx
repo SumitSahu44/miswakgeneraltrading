@@ -65,26 +65,19 @@ export default function ProductCard({ product }: ProductCardProps) {
           )}
         </div>
 
-        {/* Pricing & Direct WhatsApp Order */}
+        {/* MOQ & Direct WhatsApp Order */}
         <div className="pt-4 border-t border-[#DBC6AD]/60 mt-4 flex flex-col gap-3">
-          <div className="flex items-baseline justify-between gap-2">
-            <div className="flex items-baseline gap-2">
-              <span className="text-xl font-bold text-[#006838]">
-                {product.currency}{product.price.toLocaleString()}
-              </span>
-              {product.compareAtPrice && (
-                <span className="text-xs text-[#8A8C8F] line-through">
-                  {product.currency}{product.compareAtPrice.toLocaleString()}
-                </span>
-              )}
-            </div>
-            <span className="text-[10px] font-bold text-[#006838] bg-[#EBE0CE] px-2 py-0.5 rounded-md">
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-xs font-semibold text-[#003D25]">
+              Minimum Order:
+            </span>
+            <span className="text-[10px] font-bold text-[#006838] bg-[#EBE0CE] px-2.5 py-1 rounded-md border border-[#006838]/20">
               MOQ: 1,000 Pcs
             </span>
           </div>
 
           <a
-            href={getSingleProductWhatsAppLink(product.name, product.price, 1000)}
+            href={getSingleProductWhatsAppLink(product.name, 1000)}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}

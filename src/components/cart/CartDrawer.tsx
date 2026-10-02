@@ -52,25 +52,10 @@ export default function CartDrawer() {
             </button>
           </div>
 
-          {/* Free Shipping Progress Bar */}
-          <div className="bg-[#EBE0CE] px-6 py-3 border-b border-[#DBC6AD]/60 text-xs text-[#003D25]">
-            {subtotal >= freeShippingThreshold ? (
-              <p className="font-semibold text-[#006838] flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4" /> You unlocked FREE Pan-India Shipping!
-              </p>
-            ) : (
-              <div>
-                <p>
-                  Add <span className="font-bold text-[#006838]">₹{freeShippingThreshold - subtotal}</span> more for Free Shipping!
-                </p>
-                <div className="w-full bg-white rounded-full h-1.5 mt-1.5 overflow-hidden">
-                  <div
-                    className="bg-[#006838] h-full transition-all duration-300 rounded-full"
-                    style={{ width: `${shippingProgress}%` }}
-                  />
-                </div>
-              </div>
-            )}
+          {/* Notice Bar */}
+          <div className="bg-[#EBE0CE] px-6 py-2.5 border-b border-[#DBC6AD]/60 text-xs text-[#003D25] flex items-center gap-1.5 font-semibold">
+            <ShieldCheck className="w-4 h-4 text-[#006838] shrink-0" />
+            <span>Pan-India Direct Wholesale Express Delivery</span>
           </div>
 
           {/* Cart Items List */}
@@ -134,7 +119,7 @@ export default function CartDrawer() {
                           <Minus className="w-3.5 h-3.5" />
                         </button>
                         <span className="px-3 text-xs font-semibold text-[#171717]">
-                          {quantity}
+                          {quantity} Pcs
                         </span>
                         <button
                           onClick={() => updateQuantity(product.id, quantity + 1)}
@@ -144,11 +129,6 @@ export default function CartDrawer() {
                           <Plus className="w-3.5 h-3.5" />
                         </button>
                       </div>
-
-                      {/* Price */}
-                      <p className="font-semibold text-sm text-[#006838]">
-                        ₹{(product.price * quantity).toLocaleString()}
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -156,39 +136,22 @@ export default function CartDrawer() {
             )}
           </div>
 
-          {/* Footer Subtotal & Checkout */}
+          {/* Footer Direct WhatsApp Order */}
           {items.length > 0 && (
             <div className="p-6 bg-[#FFFDF8] border-t border-[#DBC6AD] space-y-4">
-              <div className="space-y-2">
-                <div className="flex justify-between text-sm text-[#8A8C8F]">
-                  <span>Subtotal</span>
-                  <span className="font-semibold text-[#171717]">₹{subtotal.toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between text-sm text-[#8A8C8F]">
-                  <span>Shipping</span>
-                  <span className="font-medium text-[#006838]">
-                    {subtotal >= freeShippingThreshold ? 'FREE' : 'Calculated at checkout'}
-                  </span>
-                </div>
-                <div className="flex justify-between text-base font-bold text-[#003D25] pt-2 border-t border-[#DBC6AD]/60">
-                  <span>Total</span>
-                  <span className="text-[#006838]">₹{subtotal.toLocaleString()}</span>
-                </div>
-              </div>
-
               <div className="grid grid-cols-2 gap-3 pt-2">
                 <Link
                   href="/cart"
                   onClick={closeCart}
-                  className="py-3 px-3 bg-[#EBE0CE] text-[#003D25] font-semibold text-center rounded-xl hover:bg-[#EBE0CE]/80 text-xs transition-all flex items-center justify-center"
+                  className="py-3.5 px-3 bg-[#EBE0CE] text-[#003D25] font-semibold text-center rounded-xl hover:bg-[#EBE0CE]/80 text-xs transition-all flex items-center justify-center"
                 >
                   View Cart
                 </Link>
                 <a
-                  href={getWhatsAppOrderLink(items, subtotal)}
+                  href={getWhatsAppOrderLink(items)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-3 px-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-center rounded-xl text-xs transition-all shadow-md flex items-center justify-center gap-1.5"
+                  className="py-3.5 px-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-center rounded-xl text-xs transition-all shadow-md flex items-center justify-center gap-1.5"
                 >
                   <MessageCircle className="w-4 h-4 fill-current shrink-0" />
                   <span>Order on WhatsApp</span>

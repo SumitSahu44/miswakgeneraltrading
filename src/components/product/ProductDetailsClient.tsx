@@ -95,23 +95,6 @@ export default function ProductDetailsClient({ slug }: ProductDetailsClientProps
               </span>
             </div>
 
-            {/* Price */}
-            <div className="flex items-baseline gap-3 pt-2">
-              <span className="font-serif text-3xl font-bold text-[#006838]">
-                {product.currency}{product.price.toLocaleString()}
-              </span>
-              {product.compareAtPrice && (
-                <span className="text-sm text-[#8A8C8F] line-through">
-                  {product.currency}{product.compareAtPrice.toLocaleString()}
-                </span>
-              )}
-              {product.compareAtPrice && (
-                <span className="text-xs font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded-md">
-                  Save {Math.round(((product.compareAtPrice - product.price) / product.compareAtPrice) * 100)}%
-                </span>
-              )}
-            </div>
-
             {/* Short Description */}
             <p className="text-sm text-[#171717]/80 leading-relaxed border-t border-[#EFE5D1] pt-4">
               {product.shortDescription}
@@ -160,7 +143,6 @@ export default function ProductDetailsClient({ slug }: ProductDetailsClientProps
                 <a
                   href={getSingleProductWhatsAppLink(
                     `${product.name}${activeSpec ? ` (${activeSpec})` : ''}`,
-                    product.price,
                     quantity
                   )}
                   target="_blank"

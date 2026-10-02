@@ -27,11 +27,7 @@ function ShopContent() {
     return true;
   });
 
-  if (selectedSort === 'price-low') {
-    filtered.sort((a, b) => a.price - b.price);
-  } else if (selectedSort === 'price-high') {
-    filtered.sort((a, b) => b.price - a.price);
-  } else if (selectedSort === 'newest') {
+  if (selectedSort === 'newest') {
     filtered.reverse();
   }
 
@@ -81,8 +77,6 @@ function ShopContent() {
                 className="bg-transparent text-xs font-semibold text-[#003D25] focus:outline-none cursor-pointer"
               >
                 <option value="featured">Sort: Featured</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
                 <option value="newest">Newest Arrivals</option>
               </select>
             </div>

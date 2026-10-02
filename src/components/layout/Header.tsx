@@ -141,7 +141,7 @@ export default function Header() {
                   <div className="absolute top-full left-0 pt-1 z-50">
                     <div className="w-80 bg-[#FFFDF8] rounded-2xl shadow-2xl border border-[#DBC6AD] p-3 space-y-1 animate-fade-in">
                       <div className="px-3 py-1.5 border-b border-[#EBE0CE] flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#C88E3E]">
-                        <span>Our 6 Products</span>
+                        <span>Our {products.length} Products</span>
                         <Sparkles className="w-3.5 h-3.5" />
                       </div>
 
@@ -158,9 +158,6 @@ export default function Header() {
                             {item.name}
                           </span>
                         </div>
-                        <span className="text-[11px] font-bold text-[#006838] shrink-0">
-                          ₹{item.price}
-                        </span>
                       </Link>
                     ))}
 

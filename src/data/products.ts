@@ -8,8 +8,7 @@ export const products: Product[] = [
     name: 'Fresh Miswak Without Packaging',
     description: '100% natural fresh miswak sticks delivered raw without any chemical treatment or plastic packaging. Ideal for bulk buyers, distributors, and daily organic oral care routines.',
     shortDescription: 'Fresh miswak without packaging, 100% natural, without any chemical.',
-    price: 8,
-    compareAtPrice: 12,
+    price: 0,
     currency: '₹',
     images: [
       '/products/product7.jpeg',
@@ -17,7 +16,6 @@ export const products: Product[] = [
     specifications: [
       'Minimum Quantity: 1000 pieces (MOQ)',
       'Thickness: 10 mm to 23 mm',
-      'Rate: ₹8 per piece',
       '100% Natural & Chemical Free',
     ],
     tags: ['100% Natural', 'Chemical Free', 'Fresh Miswak', 'Loose Pack', 'MOQ 1000 Pcs'],
@@ -31,15 +29,14 @@ export const products: Product[] = [
     packaging: 'Loose Bulk (Minimum 1000 Pieces)',
   },
 
-  // 2nd Product (formerly 1st)
+  // 2nd Product
   {
     id: 'prod-1',
     slug: 'miswak',
     name: 'Miswak',
     description: 'Authentic 100% natural Salvadora Persica miswak stick harvested directly from unpolluted organic roots. Rich in natural fluoride, silica, and active antibacterial minerals for complete oral health, teeth whitening, and fresh breath.',
     shortDescription: 'Authentic 100% natural Salvadora Persica miswak stick.',
-    price: 450,
-    compareAtPrice: 600,
+    price: 0,
     currency: '₹',
     images: [
       '/products/product1.jpeg',
@@ -61,43 +58,14 @@ export const products: Product[] = [
     packaging: 'Hygienic Foil Pack (Minimum 1000 Pcs)',
   },
 
-  // 3rd Product (formerly 2nd)
-  {
-    id: 'prod-2',
-    slug: 'zaitoon-stick',
-    name: 'Zaitoon Stick',
-    description: 'Traditional natural wild Olive tree (Zaitoon) miswak stick. Hand-harvested from dense olive wood branches to offer unique natural oral care benefits with a refreshing organic feel.',
-    shortDescription: 'Traditional wild olive wood (Zaitoon) natural miswak stick.',
-    price: 500,
-    compareAtPrice: 650,
-    currency: '₹',
-    images: [
-      '/products/product2.jpeg',
-    ],
-    specifications: [
-      'Minimum Quantity: 1000 pieces (MOQ)',
-      'Zaitoon length 9 inches | Thickness 7 mm to 20 mm',
-    ],
-    tags: ['Olive Wood', 'Zaitoon', 'Natural', 'Premium', 'MOQ 1000 Pcs'],
-    inStock: true,
-    featured: true,
-    rating: 5.0,
-    reviewCount: 124,
-    badge: 'BEST SELLER',
-    sku: 'MGTE-ZAT-02',
-    origin: 'Rajasthan, India',
-    packaging: 'Single Protective Wrap (Minimum 1000 Pcs)',
-  },
-
-  // 4th Product (formerly 3rd)
+  // 3rd Product
   {
     id: 'prod-3',
     slug: 'fresh-miswak-without-packaging',
     name: 'Fresh Miswak Without Packaging',
     description: 'Freshly harvested raw Salvadora Persica miswak sticks delivered without plastic or foil packaging. Designed for eco-friendly zero-waste usage and direct traditional daily routines.',
     shortDescription: 'Freshly cut raw miswak sticks delivered without plastic packaging.',
-    price: 350,
-    compareAtPrice: 450,
+    price: 0,
     currency: '₹',
     images: [
       '/products/product3.jpeg',
@@ -119,15 +87,14 @@ export const products: Product[] = [
     packaging: 'No Plastic Packaging (Minimum 1000 Pcs)',
   },
 
-  // 5th Product (formerly 4th)
+  // 4th Product
   {
     id: 'prod-4',
     slug: 'miswak-extracts',
     name: 'Miswak Extracts',
     description: '100% pure concentrated liquid extract of natural Salvadora Persica miswak root. Loaded with active organic minerals and essential oils to soothe gums and enrich oral hygiene.',
     shortDescription: '100% pure concentrated Salvadora Persica root extract liquid.',
-    price: 650,
-    compareAtPrice: 800,
+    price: 0,
     currency: '₹',
     images: [
       '/products/product4.png',
@@ -147,15 +114,14 @@ export const products: Product[] = [
     packaging: '100ml Amber Bottle (Minimum 1000 Units)',
   },
 
-  // 6th Product (formerly 5th)
+  // 5th Product
   {
     id: 'prod-5',
     slug: 'miswak-powder',
     name: 'Miswak Powder',
     description: 'Ultra-fine 100% pure organic miswak root powder. Gently polishes teeth enamel, removes surface stains, and strengthens gums without harsh chemical abrasives.',
     shortDescription: 'Finely ground 100% organic miswak root powder for enamel & gums.',
-    price: 400,
-    compareAtPrice: 500,
+    price: 0,
     currency: '₹',
     images: [
       '/products/product5.jpeg',
@@ -175,15 +141,14 @@ export const products: Product[] = [
     packaging: '100g Sealed Container (Minimum 1000 Units)',
   },
 
-  // 7th Product (formerly 6th)
+  // 6th Product
   {
     id: 'prod-6',
     slug: 'miswak-cut-pieces',
     name: 'Miswak Cut Pieces',
     description: 'Conveniently pre-cut Salvadora Persica miswak root pieces ready for immediate daily use. Sized for effortless portability and quick daily cleaning.',
     shortDescription: 'Convenient pre-cut fresh miswak pieces ready for daily use.',
-    price: 300,
-    compareAtPrice: 400,
+    price: 0,
     currency: '₹',
     images: [
       '/products/product6.jpeg',
@@ -203,15 +168,14 @@ export const products: Product[] = [
     packaging: 'Hygienic Pack of 10 Cut Pieces (Minimum 1000 Packs)',
   },
 
-  // 8th Product (from product8.jpeg)
+  // 7th Product
   {
     id: 'prod-8',
     slug: 'zaitoon-miswak-9-inch-premium',
     name: 'Zaitoon Miswak',
     description: 'Authentic 9-inch Zaitoon (wild olive wood) miswak stick. Harvested from mature olive wood roots for superior bristle density and long-lasting natural freshness.',
-    shortDescription: 'Zaitoon miswak length 9 inches, thickness 8 mm to 20 mm, rate ₹18 per piece.',
-    price: 18,
-    compareAtPrice: 25,
+    shortDescription: 'Zaitoon miswak length 9 inches, thickness 8 mm to 20 mm.',
+    price: 0,
     currency: '₹',
     images: [
       '/products/product8.jpeg',
@@ -220,7 +184,6 @@ export const products: Product[] = [
       'Minimum Quantity: 1000 pieces (MOQ)',
       'Length: 9 inches',
       'Thickness: 8 mm to 20 mm',
-      'Rate: ₹18 per piece',
       '100% Wild Olive Wood (Zaitoon)',
     ],
     tags: ['Zaitoon Miswak', '9 Inches', 'Olive Wood', 'Premium Grade', 'MOQ 1000 Pcs'],
