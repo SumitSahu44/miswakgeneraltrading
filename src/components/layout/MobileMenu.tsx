@@ -109,6 +109,16 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <ChevronRight className="w-4 h-4 text-[#8A8C8F]" />
           </Link>
 
+          {/* Our Facilities / Warehouse */}
+          <Link
+            href="/#facilities"
+            onClick={onClose}
+            className="flex items-center justify-between px-4 py-3 text-[#171717] hover:text-[#006838] hover:bg-[#EFE5D1]/60 font-semibold rounded-lg transition-colors text-sm"
+          >
+            <span>Our Facilities / Warehouse</span>
+            <ChevronRight className="w-4 h-4 text-[#8A8C8F]" />
+          </Link>
+
           {/* Products Accordion / Dropdown */}
           <div className="space-y-1">
             <button

@@ -131,6 +131,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/#facilities" className="hover:text-white hover:underline transition-colors">
+                  Our Facilities &amp; Warehouse
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="hover:text-white hover:underline transition-colors">
                   About
                 </Link>
